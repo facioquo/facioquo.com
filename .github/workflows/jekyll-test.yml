@@ -1,0 +1,35 @@
+name: Test
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  testing:
+    name: a11y
+    runs-on: ubuntu-latest
+    env:
+      BUNDLE_PATH: "vendor/bundle"
+      BUNDLE_JOBS: 4
+      BUNDLE_RETRY: 3
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1' # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          cache-version: 1 # Increment this number if you need to re-download cached gems
+
+      - name: Build site
+        run: bundle exec jekyll build
+
+      - name: Serve site
+        run: bundle exec jekyll serve --detach
+
+      - name: Show environment
+        run: npx pa11y --environment
+
+      - name: Test accessibility
+        run: npx pa11y-ci --sitemap http://127.0.0.1:4000/sitemap.xml
