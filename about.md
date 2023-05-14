@@ -13,4 +13,4 @@ Sometimes we're just goofing around.  Other times we're building something that 
 
 <p style="text-align:center;"><a button class="fq-button" href="https://github.com/facioquo">Join us on GitHub</a></p>
 
-We affiliated with and sponsored by [Skender Co.](https://skenderco.com), a U.S. based company.  They pay our website hosting fees and provide advice on our projects.  Skender Co. is also a contributor to our open-source projects and a manager of our GitHub organization.
+We are affiliated with and sponsored by [Skender Co.](https://skenderco.com), a U.S. based company.  They pay our website hosting fees and provide advice on our projects.  Skender Co. is also a contributor to our open-source projects and a manager of our GitHub organization.
