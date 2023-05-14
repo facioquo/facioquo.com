@@ -1,6 +1,6 @@
 # Site settings
 title: FacioQuo
-tagline: A community of microsite builders.
+tagline: A community of microsite builders
 lang: en-US
 
 baseurl: "" # the subpath of your site, e.g. /blog
