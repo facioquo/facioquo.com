@@ -23,11 +23,11 @@ twitter:
   card: summary
 
 # Build settings
-# https://github.com/jekyll/minima
-# theme: minima
 plugins:
-  - jekyll-seo-tag
   - jekyll-minifier
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-last-modified-at
 
 # Theme settings
 minima:

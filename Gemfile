@@ -2,11 +2,10 @@ source "https://rubygems.org"
 
 # jekyll plugins
 group :jekyll_plugins do
-  # gem 'github-pages'
-  gem 'jekyll-seo-tag'
-  # gem 'jekyll-sitemap'
-  # gem 'jekyll-last-modified-at' # used in sitemap
   gem 'jekyll-minifier'
+  gem 'jekyll-seo-tag'
+  gem 'jekyll-sitemap'
+  gem 'jekyll-last-modified-at' # used in sitemap
 end
 
 # Webrick is needed for ruby > v3.0
