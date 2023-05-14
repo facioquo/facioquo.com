@@ -1,0 +1,184 @@
+<head>
+  <meta charset="utf-8">
+  {%- if jekyll.environment != 'production' and site.google_analytics -%}
+  <meta name="robots" content="noindex, nofollow">
+  {%- endif -%}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="msapplication-TileColor" content="#181818">
+  <meta name="theme-color" content="#181818">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  {%- seo -%}
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400..600&display=swap" />
+  <link defer rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400..600&display=swap" />
+
+  <style>
+    html {
+      font-size: 16px
+    }
+
+    main {
+      display: block;
+    }
+
+    body {
+      font: 400 16px/1.5 "Rubik", "Roboto", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", Helvetica, Arial, sans-serif;
+      color: #bbbbbb;
+      background-color: #181818;
+      -webkit-text-size-adjust: 100%;
+      -webkit-font-feature-settings: "kern" 1;
+      -moz-font-feature-settings: "kern" 1;
+      -o-font-feature-settings: "kern" 1;
+      font-feature-settings: "kern" 1;
+      font-kerning: normal;
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      overflow-wrap: break-word;
+    }
+
+    body,
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-bottom: 15px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: rgb(210, 105, 30, 0.75);
+    }
+
+    p {
+      font-size: larger;
+      line-height: 1.8em;
+    }
+
+    a {
+      color: #4f97d1;
+      text-decoration: none;
+    }
+
+    .page-content {
+      padding: 36px 0;
+      flex: 1 0 auto;
+    }
+
+    @media screen and (max-width: 400px) {
+      .not-mobile {
+        display: none;
+      }
+    }
+
+    .fq-button {
+      cursor: pointer;
+      display: inline-block;
+
+      border: solid 5px #bbbbbb;
+      border-radius: 8px;
+
+      margin: 1rem 2px;
+      padding: 0.75rem 2rem;
+
+      font-size: larger;
+      font-weight: bold;
+      /* color: #bbbbbb; */
+      text-align: center;
+    }
+
+    a.fq-button {
+      text-decoration: none;
+
+      &:hover {
+
+        background-color: rgb(46, 46, 46, 0.1);
+        text-decoration: underline;
+
+        box-shadow:
+          0px 10px 10px -3px rgb(46, 46, 46, 0.2),
+          0px 16px 20px 1px rgb(46, 46, 46, 0.14),
+          0px 6px 28px 2px rgb(46, 46, 46, 0.12);
+      }
+
+      &:active {
+
+        background-color: rgb(27, 27, 27, 0.1);
+
+        box-shadow:
+          0px 15px 15px -3px rgb(27, 27, 27, 0.2),
+          0px 24px 30px 1px rgb(27, 27, 27, 0.14),
+          0px 9px 40px 2px rgb(27, 27, 27, 0.12);
+      }
+    }
+  </style>
+
+  <link rel="icon" type="image/x-icon" href="{{ '/assets/icons/favicon.ico' }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="manifest" href="/assets/icons/site.webmanifest">
+  <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#181818">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+
+  {%- if jekyll.environment == 'production' and site.google_analytics -%}
+  {%- include google-analytics.html -%}
+  {%- endif -%}
+
+  {%- if page.layout == 'home' -%}
+  <style>
+    .splash {
+      width: 400px;
+      height: 260px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    .splash h1,
+    .splash h2,
+    .splash h3,
+    .splash p {
+      text-align: center;
+      color: #bbbbbb;
+    }
+
+    .splash h1 {
+      font-size: 3.5em;
+      font-weight: 600;
+      line-height: 1;
+      color: #e6c74c;
+    }
+
+    .splash h2 {
+      font-size: 1.5em;
+      margin-bottom: 3em;
+    }
+
+    @media screen and (max-width: 400px) {
+      .splash {
+        width: 280px;
+      }
+
+      .splash h1 {
+        font-size: 2.9em;
+        font-weight: 500;
+      }
+    }
+  </style>
+  {%- else -%}
+  <link defer rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {%- endif -%}
+</head>
