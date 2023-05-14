@@ -1,6 +1,4 @@
-/**
- * Site header
- */
+// Site header
 .site-header {
   border-top: 5px solid $border-color-03;
   border-bottom: 1px solid $border-color-01;
@@ -120,12 +118,10 @@
 
 
 
-/**
- * Site footer
- */
+// Site footer
 .site-footer {
   border-top: 1px solid $border-color-01;
-  padding: $spacing-unit 0;
+  // padding: $spacing-unit 0;
 }
 
 .footer-heading {
@@ -133,14 +129,13 @@
   margin-bottom: $spacing-unit * .5;
 }
 
-.contact-list,
-.social-media-list {
+.contact-list {
   list-style: none;
   margin-left: 0;
+  padding-left: 0;
 }
 
-.footer-col-wrapper,
-.social-links {
+.footer-col-wrapper {
   @include relative-font-size(0.9375);
   color: $brand-color;
 }
@@ -181,28 +176,18 @@
     width: calc(100% - (#{$spacing-unit} / 2));
     padding: 0 ($spacing-unit * .5);
 
-    &:first-child {
-      padding-right: $spacing-unit * .5;
-      padding-left: 0;
-    }
-
     &:last-child {
       padding-right: 0;
-      // padding-left: $spacing-unit * .5;
+    }
+
+    &:first-child {
+      padding-left: 0;
     }
   }
 }
 
 
-
-/**
- * Page content
- */
-.page-content {
-  padding: $spacing-unit 0;
-  flex: 1 0 auto;
-}
-
+// Page content
 .page-heading {
   @include relative-font-size(2);
 }
@@ -231,10 +216,7 @@
 }
 
 
-
-/**
- * Posts
- */
+// Posts
 .post-header {
   margin-bottom: $spacing-unit;
 }
@@ -293,38 +275,9 @@
 }
 
 
-.social-media-list {
-  display: table;
-  margin: 0 auto;
-
-  li {
-    float: left;
-    margin: 5px 10px 5px 0;
-
-    &:last-of-type {
-      margin-right: 0
-    }
-
-    a {
-      display: block;
-      padding: 10px 12px;
-      border: 1px solid $border-color-01;
-
-      &:hover {
-        border-color: $border-color-02
-      }
-    }
-  }
-}
-
-
-
-/**
- * Pagination navbar
- */
+// Pagination navbar
 .pagination {
   margin-bottom: $spacing-unit;
-  @extend .social-media-list;
 
   li {
 
@@ -349,10 +302,7 @@
 }
 
 
-
-/**
- * Grid helpers
- */
+// Grid helper
 @media screen and (min-width: $on-large) {
   .one-half {
     width: calc(50% - (#{$spacing-unit} / 2));

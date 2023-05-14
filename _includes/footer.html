@@ -1,14 +1,14 @@
 {%- if page.footer %}
-<footer class="site-footer h-card">
+<footer class="site-footer">
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
-  <div class="wrapper">
+  <div class="body-container">
 
     <div class="footer-col-wrapper">
       <div class="footer-col">
         {%- if site.author %}
         <ul class="contact-list">
-          {% if site.author.name -%}
+          {% if site.title -%}
           <li class="p-name">
             <a class="site-title" style="float:none;" rel="author"
                href="{{ "/" | relative_url }}">
