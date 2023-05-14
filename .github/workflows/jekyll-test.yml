@@ -1,4 +1,4 @@
-name: Test accessibility
+name: Test
 
 on:
   pull_request:
@@ -23,11 +23,9 @@ jobs:
           cache-version: 1 # Increment this number if you need to re-download cached gems
 
       - name: Build site
-        working-directory: docs
         run: bundle exec jekyll build
 
       - name: Serve site
-        working-directory: docs
         run: bundle exec jekyll serve --detach
 
       - name: Show environment
