@@ -31,7 +31,6 @@ plugins:
 
 # Theme settings
 minima:
-  skin: dark
   social_links:
     - { platform: github,  user_url: "https://github.com/facioquo" }
 

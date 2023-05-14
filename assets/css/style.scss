@@ -1,14 +1,6 @@
 ---
 ---
-@import "minima/skins/{{ site.minima.skin | default: 'classic' }}", "minima/initialize";
+@import "minima/initialize";
 
-// SCSS overrides only
-// use built-in overrides in _config.yml if available
-
-// Home splash screen hard-coded in HEAD
-
-
-// overrides for issue https: //github.com/jekyll/minima/issues/709
-blockquote {
-  padding-left: $spacing-unit * .5;
-}
+// See _scss folder for overrides
+// no edits needed here
