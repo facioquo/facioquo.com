@@ -9,8 +9,8 @@ footer: true
 
 {{ page.description }}
 
-Sometimes we're just goofing around.  Other times we're building something that we need for our own professional lives.  Most of the time, we're just trying to help people.  We hope you enjoy our work.
+Sometimes we're just goofing around.  Other times we're building something needed for our professional lives.  Most of the time, we're just trying to help people.  We hope you enjoy our work.
 
-<p><a button class="fq-button" href="https://github.com/facioquo">Join us on GitHub</a></p>
+<p style="margin-bottom:3rem;"><a button class="fq-button" href="https://github.com/facioquo">Join us on GitHub</a></p>
 
-We are affiliated with and sponsored by [Skender Co.](https://skenderco.com), a U.S. based company.  They pay our website hosting fees and advise on projects.  Skender Co. is also a contributor to our open-source projects and a manager of our GitHub organization.
+We are affiliated with and sponsored by [Skender Co.](https://skenderco.com), a U.S. based company.  They pay our website hosting fees and advise on projects.  Skender Co. is also a contributor to our open-source projects and the manager of our GitHub org.
