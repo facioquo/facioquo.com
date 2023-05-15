@@ -2,15 +2,9 @@
 
 // Typography and fonts
 $code-font-family: "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mono", "Liberation Mono", "Courier New", monospace;
-$base-font-size: 16px !default;
-$small-font-size: $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
 
 // Layout sizes
-$spacing-unit: calc($base-font-size/2) !default;
-
-$content-width: 750px !default;
-
 $on-palm: 480px !default;
 $on-laptop: 750px !default;
 $on-medium: $on-palm !default;
@@ -19,10 +13,7 @@ $on-large: $on-laptop !default;
 /* Use media queries like this:
 
 @include media-query($on-palm) {
-  .body-container {
-    padding-right: calc($spacing-unit / 2);
-    padding-left: calc($spacing-unit / 2);
-  }
+  [..]
 }
 
 */

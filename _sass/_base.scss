@@ -20,8 +20,8 @@
 // BASE STYLES
 
 hr {
-  margin-top: $spacing-unit;
-  margin-bottom: $spacing-unit;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 
@@ -35,7 +35,7 @@ img {
 // Lists
 ul,
 ol {
-  margin-left: $spacing-unit;
+  margin-left: 1rem;
 }
 
 li {
@@ -51,7 +51,7 @@ li {
 blockquote {
   color: $brand-color;
   border-left: 4px solid $border-color-01;
-  padding-left: $spacing-unit * .5;
+  padding-left: 1rem;
   @include relative-font-size(1.125);
   font-style: italic;
 
@@ -94,18 +94,12 @@ pre {
 
 // Body container
 .body-container {
-  max-width: calc(#{$content-width} - (#{$spacing-unit}));
+  max-width: 750px;
   margin-right: auto;
   margin-left: auto;
-  padding-right: $spacing-unit * .5;
-  padding-left: $spacing-unit * .5;
+  padding-right: 1rem;
+  padding-left: 1rem;
   @extend %clearfix;
-
-  @media screen and (min-width: $on-large) {
-    max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-  }
 }
 
 

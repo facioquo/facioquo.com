@@ -2,8 +2,8 @@
 .site-header {
   border-top: 5px solid $border-color-03;
   border-bottom: 1px solid $border-color-01;
-  min-height: $spacing-unit * 1.865;
-  line-height: $base-line-height * $base-font-size * 2.25;
+  min-height: 2rem;
+  line-height: $base-line-height * 16px * 2.25;
 
   // Positioning context for the mobile navigation icon
   position: relative;
@@ -29,7 +29,7 @@
 .site-nav {
   position: absolute;
   top: 9px;
-  right: $spacing-unit * .5;
+  right: 0.5rem;
   background-color: $background-color;
   border: 1px solid $border-color-01;
   border-radius: 5px;
@@ -121,12 +121,11 @@
 // Site footer
 .site-footer {
   border-top: 1px solid $border-color-01;
-  // padding: $spacing-unit 0;
 }
 
 .footer-heading {
   @include relative-font-size(1.125);
-  margin-bottom: $spacing-unit * .5;
+  margin-bottom: 0.5rem;
 }
 
 .contact-list {
@@ -141,30 +140,7 @@
 }
 
 .footer-col {
-  margin-bottom: $spacing-unit * .5;
-}
-
-.footer-col-1,
-.footer-col-2 {
-  width: calc(50% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-3 {
-  width: calc(100% - (#{$spacing-unit} / 2));
-}
-
-@media screen and (min-width: $on-large) {
-  .footer-col-1 {
-    width: calc(35% - (#{$spacing-unit} / 2));
-  }
-
-  .footer-col-2 {
-    width: calc(20% - (#{$spacing-unit} / 2));
-  }
-
-  .footer-col-3 {
-    width: calc(45% - (#{$spacing-unit} / 2));
-  }
+  margin-bottom: 0.5rem;
 }
 
 @media screen and (min-width: $on-medium) {
@@ -173,8 +149,7 @@
   }
 
   .footer-col {
-    width: calc(100% - (#{$spacing-unit} / 2));
-    padding: 0 ($spacing-unit * .5);
+    padding: 0 0.5rem;
 
     &:last-child {
       padding-right: 0;
@@ -201,12 +176,12 @@
   list-style: none;
 
   >li {
-    margin-bottom: $spacing-unit;
+    margin-bottom: 0.5rem;
   }
 }
 
 .post-meta {
-  font-size: $small-font-size;
+  font-size: 0.875rem;
   color: $brand-color;
 }
 
@@ -218,7 +193,7 @@
 
 // Posts
 .post-header {
-  margin-bottom: $spacing-unit;
+  margin-bottom: 0.5rem;
 }
 
 .post-title,
@@ -234,7 +209,7 @@
 }
 
 .post-content {
-  margin-bottom: $spacing-unit;
+  margin-bottom: 0.5rem;
 
   h1,
   h2,
@@ -242,7 +217,7 @@
   h4,
   h5,
   h6 {
-    margin-top: $spacing-unit
+    margin-top: 0.5rem;
   }
 
   h2 {
@@ -277,7 +252,7 @@
 
 // Pagination navbar
 .pagination {
-  margin-bottom: $spacing-unit;
+  margin-bottom: 0.5rem;
 
   li {
 
@@ -290,7 +265,7 @@
 
     div {
       display: block;
-      padding: $spacing-unit * .25;
+      padding: 0.25rem;
       border: 1px solid transparent;
 
       &.pager-edge {
@@ -298,13 +273,5 @@
         border: 1px dashed;
       }
     }
-  }
-}
-
-
-// Grid helper
-@media screen and (min-width: $on-large) {
-  .one-half {
-    width: calc(50% - (#{$spacing-unit} / 2));
   }
 }
