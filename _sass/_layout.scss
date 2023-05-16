@@ -201,7 +201,7 @@
   @include relative-font-size(3);
   letter-spacing: -1px;
   line-height: 1.15;
-  color: rgb(230, 199, 76, 0.80);
+  color: rgba(230, 199, 76, 0.80);
 
   @media screen and (min-width: $on-large) {
     @include relative-font-size(3);
@@ -209,7 +209,7 @@
 }
 
 .post-content {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 
   h1,
   h2,
@@ -217,7 +217,8 @@
   h4,
   h5,
   h6 {
-    margin-top: 0.5rem;
+    margin-top: 2rem;
+    line-height: 1.1;
   }
 
   h2 {
