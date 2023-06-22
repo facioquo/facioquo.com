@@ -15,7 +15,7 @@
   "markdownlint.config": {
     "MD033": false, // no-inline-html
     "MD025": false, // single-title/single-h1 --> fails with front-matter
-    "MD041": false, // single-title/single-h1 --> fails with front-matter
+    "MD041": false  // single-title/single-h1 --> fails with front-matter
   },
   "cSpell.words": [
     "daveskender",
