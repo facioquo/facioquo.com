@@ -1,5 +1,5 @@
 ---
-title: Simple tools for everyone
+title: About us
 description: >-
   FacioQuo is an organization of experienced software creators 
   that builds online tools and microsites.
