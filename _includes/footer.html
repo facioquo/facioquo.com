@@ -3,7 +3,7 @@
   <div class="body-container">
     <div class="footer-col-wrapper">
       <div class="footer-col">
-        {%- if site.author %}
+        {%- if site.organization %}
         <ul class="contact-list">
           {% if site.title -%}
           <li class="p-name">
@@ -13,8 +13,8 @@
             </a></li>
           <li class="p-name">{{ site.tagline | escape }}</li>
           {% endif -%}
-          {% if site.author.email -%}
-          <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+          {% if site.organization.email -%}
+          <li><a class="u-email" href="mailto:{{ site.organization.email }}">{{ site.organization.email }}</a></li>
           {%- endif %}
         </ul>
         {%- endif %}

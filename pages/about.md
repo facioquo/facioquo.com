@@ -1,5 +1,5 @@
 ---
-title: Simple tools for everyone
+title: About us
 description: >-
   FacioQuo is an organization of experienced software creators 
   that builds online tools and microsites.
@@ -16,4 +16,4 @@ Everyone is welcome to contribute to our public projects.
 
 <p style="margin-bottom:3rem;"><a button class="fq-button" href="https://github.com/facioquo">Join us on GitHub</a></p>
 
-We are affiliated with [Skender Co.](https://skenderco.com), a U.S. based company.  Skender Co. is a core contributor to our open-source projects and the owner of this GitHub org.  Some of our projects are freemium commercial endeavors, while others are open to the community at no cost.
+We are affiliated with [Skender Co.](https://skenderco.com), a U.S. based company.  Skender Co. is a core contributor to our open-source projects and the owner of this GitHub org.
