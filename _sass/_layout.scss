@@ -217,11 +217,13 @@
   h4,
   h5,
   h6 {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     line-height: 1.1;
   }
 
   h2 {
+    font-weight: 500;
+
     @include relative-font-size(1.75);
 
     @media screen and (min-width: $on-large) {
