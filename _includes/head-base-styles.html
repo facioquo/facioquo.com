@@ -3,11 +3,7 @@
         font-size: 16px
     }
 
-    main {
-        display: block;
-        padding: 5rem 2rem;
-    }
-
+    /* LAYOUTS */
     body {
         font: 400 16px/1.5 "Rubik", "Roboto", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", Helvetica, Arial, sans-serif;
         color: #bbbbbb;
@@ -24,9 +20,26 @@
         overflow-wrap: break-word;
 
         margin: 0;
-        padding: 0;
+        padding: 2rem 1.3rem;
     }
 
+    main,
+    footer {
+        display: block;
+        position: relative;
+        max-width: 750px;
+        margin: 1rem auto 2rem auto;
+        width: 100%;
+    }
+
+    footer {
+        padding-top: 1rem;
+        border-top: solid;
+        border-width: 1px;
+        border-color: #0b0b0b;
+    }
+
+    /* TYPOGRAPHY */
     h1,
     h2,
     h3,
@@ -38,14 +51,47 @@
 
     h1,
     h2,
-    h3 {
-        margin-top: 2rem;
+    h3,
+    h4,
+    h5,
+    h6,
+    .page-title {
         font-weight: 600;
+        margin-top: 2.5rem;
+        line-height: 1.1;
     }
 
-    p {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+        font-weight: 400;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 2rem;
+    }
+
+    p,
+    .body-font {
         font-size: larger;
         line-height: 1.5em;
+    }
+
+    ol,
+    ul {
+        font-size: larger;
+        line-height: 1.1em;
+    }
+
+    li {
+        line-height: 1.1em;
+        margin-bottom: 0.5rem;
     }
 
     a {
@@ -58,35 +104,88 @@
     }
 
     a:hover {
-        color: #bbbbbb;
+        color: #adadad;
         text-decoration: underline;
     }
 
-    .page-content,
-    .site-footer {
-        padding: 2rem 1.5rem;
-        flex: 1 0 auto;
+    code {
+        font-family: "Menlo", "Inconsolata", "Consolas", "Courier New", monospace;
+        border: 1px solid rgba(145, 145, 145, 0.35);
+        border-radius: 3px;
+        background-color: #191919;
+        padding: 1px 5px;
     }
 
-    @media screen and (max-width: 400px) {
+    /* FONT STYLES */
+    .page-title,
+    .section-title,
+    .site-title {
+        font-size: 1.8em;
+        font-weight: 600;
+        line-height: 1;
+        color: rgba(230, 199, 76, 0.50);
+    }
+
+    .page-title,
+    .section-title {
+        font-size: 3.5em;
+        color: rgba(230, 199, 76, 0.70);
+        margin-bottom: 2rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    @media screen and (max-width: 480px) {
+
+        .page-title {
+            font-size: 3rem;
+        }
+
+        .section-title {
+            font-size: 2.1rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+    }
+
+    .site-tagline {
+        font-weight: 200;
+    }
+
+    /* SHOW/HIDE CONTROLS */
+    @media screen and (max-width: 480px) {
         .not-mobile {
             display: none;
         }
     }
 
+    @media screen and (min-width: 480px) {
+        .mobile-only {
+            display: none;
+        }
+    }
+
+    /* BUTTONS */
     .fq-button {
         cursor: pointer;
         display: inline-block;
 
-        border: solid 4px #919191;
+        border: solid 4px #adadad;
         border-radius: 8px;
+        background-color: unset;
 
         margin: 1rem 0;
         padding: 0.75rem 2rem;
 
+        font-family: inherit;
         font-size: larger;
         font-weight: bold;
-        color: #bbbbbb;
+        color: #adadad;
         text-align: center;
 
         text-decoration: none;
@@ -101,19 +200,19 @@
 
     .fq-button:hover {
 
-        color: #bbbbbb;
-        background-color: rgb(46, 46, 46);
+        color: #adadad;
+        background-color: rgb(35, 35, 35);
         text-decoration: underline;
 
         box-shadow:
-            0px 10px 10px -3px rgb(46, 46, 46, 0.2),
-            0px 16px 20px 1px rgb(46, 46, 46, 0.14),
-            0px 6px 28px 2px rgb(46, 46, 46, 0.12);
+            0px 10px 10px -3px rgba(86, 92, 101, 0.2),
+            0px 16px 20px 1px rgb(86, 92, 101, 0.14),
+            0px 6px 28px 2px rgb(86, 92, 101, 0.12);
     }
 
     .fq-button:active {
 
-        color: #bbbbbb;
+        color: #adadad;
         background-color: rgb(86, 92, 101);
 
         box-shadow:
@@ -123,6 +222,6 @@
     }
 
     .fq-button:visited {
-        color: #bbbbbb;
+        color: #adadad;
     }
 </style>

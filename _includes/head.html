@@ -4,8 +4,8 @@
   <meta name="robots" content="noindex, nofollow">
   {%- endif -%}
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="msapplication-TileColor" content="#212121">
-  <meta name="theme-color" content="#212121">
+  <meta name="msapplication-TileColor" content="#1b1b1b">
+  <meta name="theme-color" content="#1b1b1b">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   {%- seo -%}
 
@@ -26,17 +26,19 @@
   {%- include google-analytics.html -%}
   {%- endif -%}
 
-  {%- if page.layout == 'home' -%}
-    {%- include head-home-styles.html -%}
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name" : "FacioQuo",
-      "url": "https://facioquo.com",
-      "logo": "https://facioquo.com/assets/logo.svg"
-    }
-    </script>
+  {%- if page.name == 'home.html' -%}
+  {%- include head-home-styles.html -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name" : "FacioQuo",
+    "url": "https://facioquo.com",
+    "logo": "https://facioquo.com/assets/logo.svg"
+  }
+  </script>
+  <script defer src="/assets/js/utilities.js"></script>
+
   {%- else -%}
   <link defer rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   {%- endif -%}

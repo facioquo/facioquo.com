@@ -34,10 +34,6 @@ minima:
   social_links:
     - { platform: github,  user_url: "https://github.com/facioquo" }
 
-# Pages shown in top menu
-header_pages:
-  # - about.md
-
 defaults:
   - scope:
       path: "" # an empty string here means all files in the project
