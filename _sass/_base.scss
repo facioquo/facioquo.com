@@ -4,19 +4,6 @@
 // head-base-styles.html
 // head-home-styles.html
 
-// MIXINS
-// Notice the following mixin uses max-width, in a deprecated, desktop-first
-// approach, whereas media queries used elsewhere now use min-width.
-@mixin media-query($device) {
-  @media screen and (max-width: $device) {
-    @content;
-  }
-}
-
-@mixin relative-font-size($ratio) {
-  font-size: #{$ratio}rem;
-}
-
 // BASE STYLES
 
 hr {
@@ -24,88 +11,7 @@ hr {
   margin-bottom: 1rem;
 }
 
-
-// Images
 img {
   max-width: 100%;
   vertical-align: middle;
-}
-
-
-// Lists
-ul,
-ol {
-  font-size: larger;
-  line-height: 1.1;
-}
-
-li {
-  margin-bottom: 0.5rem;
-
-  >ul,
-  >ol {
-    margin-bottom: 0;
-  }
-}
-
-
-// Blockquote
-blockquote {
-  color: $brand-color;
-  border-left: 4px solid $border-color-01;
-  padding-left: 1rem;
-  @include relative-font-size(1.125);
-  font-style: italic;
-
-  > :last-child {
-    margin-bottom: 0;
-  }
-
-  i,
-  em {
-    font-style: normal;
-  }
-}
-
-
-// Code
-pre,
-code {
-  font-family: $code-font-family;
-  font-size: 0.9375em;
-  border: 1px solid $border-color-01;
-  border-radius: 3px;
-  background-color: $code-background-color;
-}
-
-code {
-  padding: 1px 5px;
-}
-
-pre {
-  padding: 8px 12px;
-  overflow-x: auto;
-
-  >code {
-    border: 0;
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
-
-// Body container
-.body-container {
-  max-width: 750px;
-  margin-right: auto;
-  margin-left: auto;
-  @extend %clearfix;
-}
-
-
-// Clearfix
-%clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
 }
