@@ -19,9 +19,6 @@ organization:
   name: FacioQuo
   email: info@facioquo.com
 
-twitter:
-  card: summary
-
 # Build settings
 plugins:
   - jekyll-minifier
