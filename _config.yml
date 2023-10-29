@@ -6,8 +6,6 @@ lang: en-US
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://facioquo.com" # the base hostname & protocol for your site, e.g. http://example.com
 
-google_analytics: G-S4GLSZNG8N
-
 # SEO configuration
 # see https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 image:
