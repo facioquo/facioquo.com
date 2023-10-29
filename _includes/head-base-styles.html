@@ -6,7 +6,7 @@
     /* LAYOUTS */
     body {
         font: 400 16px/1.5 "Rubik", "Roboto", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", Helvetica, Arial, sans-serif;
-        color: #bbbbbb;
+        color: #adadad;
         background-color: #1b1b1b;
         -webkit-text-size-adjust: 100%;
         -webkit-font-feature-settings: "kern" 1;
@@ -95,17 +95,15 @@
     }
 
     a {
-        color: #4f97d1;
-        text-decoration: none;
+        color: inherit;
     }
 
     a:visited {
-        color: #4f97d1;
+        color: inherit;
     }
 
     a:hover {
-        color: #adadad;
-        text-decoration: underline;
+        color: #c9c9c9;
     }
 
     code {
@@ -171,6 +169,14 @@
     }
 
     /* BUTTONS */
+    button {
+        min-height: 3.2em;
+
+        @media screen and (max-width: 480px) {
+            width: 100%;
+        }
+    }
+
     .fq-button {
         cursor: pointer;
         display: inline-block;
@@ -200,7 +206,7 @@
 
     .fq-button:hover {
 
-        color: #adadad;
+        color: #c9c9c9;
         background-color: rgb(35, 35, 35);
         text-decoration: underline;
 
