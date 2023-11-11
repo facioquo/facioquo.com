@@ -1,26 +1,29 @@
 <style>
     html {
-        font-size: 16px
-    }
+        font-family: "Rubik", "Google Sans", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        color: #e0e0e0;
 
-    /* LAYOUTS */
-    body {
-        font: 400 16px/1.5 "Rubik", "Roboto", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", Helvetica, Arial, sans-serif;
-        color: #adadad;
-        background-color: #1b1b1b;
         -webkit-text-size-adjust: 100%;
         -webkit-font-feature-settings: "kern" 1;
         -moz-font-feature-settings: "kern" 1;
         -o-font-feature-settings: "kern" 1;
         font-feature-settings: "kern" 1;
-        font-kerning: normal;
+        font-kerning: normal;    }
+
+    /* LAYOUTS */
+    body {
+        color: #adadad;
+        background-color: #1b1b1b;
+
         display: flex;
-        min-height: 100vh;
         flex-direction: column;
         overflow-wrap: break-word;
 
         margin: 0;
-        padding: 2rem 1.3rem;
+        padding: 2rem 1rem;
+        min-height: calc(100vh - 4rem);
     }
 
     main,
@@ -28,7 +31,7 @@
         display: block;
         position: relative;
         max-width: 750px;
-        margin: 1rem auto 2rem auto;
+        margin: 1rem auto;
         width: 100%;
     }
 
