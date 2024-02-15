@@ -68,5 +68,6 @@
     "!typescript",
     "!typescriptreact",
     "!vue"
-  ]
+  ],
+  "svg.preview.background": "transparent"
 }
