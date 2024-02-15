@@ -17,10 +17,10 @@
   {%- include head-base-styles.html -%}
 
   <link rel="manifest" href="/assets/manifest.json">
-  <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico?v=20231101">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png?v=20231101">
+  <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico?v=YYYY.MM.DD">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png?v=YYYY.MM.DD">
   <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#1b1b1b">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png?v=20231101">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png?v=YYYY.MM.DD">
 
   {%- if page.name == 'home.html' -%}
   {%- include head-home-styles.html -%}
@@ -36,6 +36,6 @@
   {%- include utilities.script.html -%}
 
   {%- else -%}
-  <link defer rel="stylesheet" href="{{ '/assets/css/style.css?v=20231101' | relative_url }}">
+  <link defer rel="stylesheet" href="{{ '/assets/css/style.css?v=YYYY.MM.DD' | relative_url }}">
   {%- endif -%}
 </head>
