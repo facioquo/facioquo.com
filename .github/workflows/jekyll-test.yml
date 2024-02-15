@@ -1,20 +1,23 @@
-name: Test
+name: Website
 
 on:
   pull_request:
-    branches: [main]
+    branches: ["main"]
 
 jobs:
   testing:
-    name: a11y
-    runs-on: ubuntu-latest
+    name: test a11y
+    runs-on: ubuntu-20.04
     env:
       BUNDLE_PATH: "vendor/bundle"
       BUNDLE_JOBS: 4
       BUNDLE_RETRY: 3
+
     steps:
+
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
