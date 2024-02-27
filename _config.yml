@@ -9,9 +9,10 @@ url: "https://facioquo.com" # the base hostname & protocol for your site, e.g. h
 # SEO configuration
 # see https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 image:
-  path: /assets/icons/android-chrome-512x512.png
-  height: 512
-  width: 512
+  path: /assets/social-banner.png
+  height: 640
+  width: 1280
+  alt: FacioQuo
 
 organization:
   name: FacioQuo
@@ -35,3 +36,4 @@ defaults:
     values:
       layout: "base"
       footer: true
+      image: /assets/social-banner.png
