@@ -1,46 +1,46 @@
 <style>
-    .splash-page {
-        height: calc(100vh - 5rem);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+  .splash-page {
+    height: calc(100dvh - 6rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .splash {
-        width: min(400px, calc(100vw - 3rem));
-        text-align: center;
-    }
+  .splash {
+    width: min(400px, calc(100vw - 3rem));
+    text-align: center;
+  }
 
-    .splash h1,
-    .splash h2,
-    .splash h3,
-    .splash p {
-        color: #bbbbbb;
-    }
+  .splash h1,
+  .splash h2,
+  .splash h3,
+  .splash p {
+    color: #bbbbbb;
+  }
+
+  .splash h1 {
+    font-size: 3.5em;
+    line-height: 1;
+    color: rgba(230, 199, 76, 0.85);
+    margin: 0 0 1rem 0;
+  }
+
+  .splash h2 {
+    font-size: 1.5em;
+    margin: 0 0 3rem 0;
+  }
+
+  @media screen and (max-width: 480px) {
 
     .splash h1 {
-        font-size: 3.5em;
-        line-height: 1;
-        color: rgba(230, 199, 76, 0.85);
-        margin: 0 0 1rem 0;
+      font-size: 2.9em;
+      font-weight: 500;
     }
+  }
 
-    .splash h2 {
-        font-size: 1.5em;
-        margin: 0 0 3rem 0;
-    }
-
-    @media screen and (max-width: 480px) {
-
-        .splash h1 {
-            font-size: 2.9em;
-            font-weight: 500;
-        }
-    }
-
-    .splash p {
-        font-size: 1rem;
-        line-height: 1.3;
-    }
+  .splash p {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
 </style>
