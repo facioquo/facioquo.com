@@ -28,7 +28,7 @@ plugins:
 # Theme settings
 minima:
   social_links:
-    - { platform: github,  user_url: "https://github.com/facioquo" }
+    - { platform: github, user_url: "https://github.com/facioquo" }
 
 defaults:
   - scope:
