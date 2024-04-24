@@ -1,4 +1,13 @@
 <script defer>
+  function scrollToAbout() {
+    setTimeout(function () {
+      var aboutElement = document.getElementById('about-us');
+      aboutElement.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
+      var arrowElement = document.getElementById('learn-more');
+      arrowElement.hidden = true;
+    }, 200);
+  }
+
   function scrollToStart(id) {
     setTimeout(function () {
       var element = document.getElementById(id);
