@@ -1,15 +1,42 @@
 <script defer>
-  function scrollToStart(id) {
+
+  // homepage: scroll to about on wheel down
+  function scrollToAbout() {
+
+    // handle wheel (allow click)
+    if (event.type == "wheel") {
+
+      // discontinue on wheel up
+      if (event.deltaY < 0) return;
+
+      // disable normal wheel
+      else event.preventDefault();
+    }
+
     setTimeout(function () {
-      var element = document.getElementById(id);
-      element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
+
+      // hide obsolete arrow navigation
+      var arrowElement = document.getElementById('shift-nav');
+      arrowElement.style.visibility = 'hidden';
+
+      // scroll to about information
+      var aboutElement = document.getElementById('about-us');
+      aboutElement.style.display = "block";
+      aboutElement.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
     }, 200);
   }
 
-  function scrollToEnd(id) {
+  // homepage: scroll to splash on wheel up
+  function scrollToSplash() {
+
+    // discontinue on wheel down
+    if (event.deltaY > 0) return;
+
+    event.preventDefault();
+
     setTimeout(function () {
-      var element = document.getElementById(id);
-      element.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'end' });
+      var element = document.getElementById('splash');
+      element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
     }, 200);
   }
 </script>

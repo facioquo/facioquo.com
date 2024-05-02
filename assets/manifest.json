@@ -1,14 +1,14 @@
 {
   "name": "FacioQuo",
   "short_name": "facioquo",
-  "description": "We make useful or fun microsites to help or entertain others.",
+  "description": "We make useful or fun software to help or entertain others.",
   "theme_color": "#1b1b1b",
   "background_color": "#1b1b1b",
   "icons": [
     {
       "src": "logo.svg",
       "type": "image/svg+xml",
-      "sizes": "609x609"
+      "sizes": "340x340"
     },
     {
       "src": "icons/maskable_icon_x192.png",
