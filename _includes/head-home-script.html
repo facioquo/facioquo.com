@@ -1,0 +1,44 @@
+<script defer>
+
+  document.addEventListener("DOMContentLoaded", startup);
+
+  var touchStart;
+
+  function startup() {
+
+    const splash = document.getElementById("splash");
+
+    addEventListener("touchstart", (event) => {
+      touchStart = event.touches[0].clientY;
+    }, { passive: false, once: true });
+
+    splash.addEventListener("wheel", scrollToAbout, { passive: false, once: true });
+    splash.addEventListener("touchend", scrollToAbout, { passive: false, once: true });
+  }
+
+  // homepage: scroll to about on wheel/swipe down
+  function scrollToAbout() {
+
+    // discontinue on wheel up
+    if (event.type == "wheel" && event.deltaY < 0) return;
+
+    // discontinue on touch up
+    if (event.type == "touchend") {
+      var touchEnd = event.changedTouches[0].clientY;
+      if (touchEnd > touchStart) return;
+    }
+
+    // scroll to about section
+    setTimeout(function () {
+
+      // hide obsolete arrow navigation
+      var arrowElement = document.getElementById('shift-nav');
+      arrowElement.style.visibility = 'hidden';
+
+      // scroll to about information
+      var aboutElement = document.getElementById('about-us');
+      aboutElement.style.display = "block";
+      aboutElement.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+    }, 200);
+  }
+</script>
