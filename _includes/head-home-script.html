@@ -6,14 +6,15 @@
 
   function startup() {
 
-    var splash = document.getElementById("splash");
+    document.addEventListener(
+      "touchstart", handleTouchStart, { passive: false, once: true });
 
-    document.addEventListener("touchstart", function(event) {
-      touchStart = event.touches[0].clientY;
-    }, { passive: false, once: true });
+    document.addEventListener("wheel", scrollToAbout, { passive: false, once: true });
+    document.addEventListener("touchend", scrollToAbout, { passive: false, once: true });
+  }
 
-    splash.addEventListener("wheel", scrollToAbout, { passive: false, once: true });
-    splash.addEventListener("touchend", scrollToAbout, { passive: false, once: true });
+  function handleTouchStart() {
+    touchStart = event.touches[0].clientY;
   }
 
   // homepage: scroll to about on wheel/swipe down
