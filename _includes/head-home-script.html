@@ -8,7 +8,7 @@
 
     var splash = document.getElementById("splash");
 
-    addEventListener("touchstart", (event) => {
+    document.addEventListener("touchstart", function(event) {
       touchStart = event.touches[0].clientY;
     }, { passive: false, once: true });
 
