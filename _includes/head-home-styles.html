@@ -14,9 +14,9 @@
 
   .splash h1,
   .splash h2,
-  .splash h3,
-  .splash p {
-    color: #bbbbbb;
+  .splash h3 {
+    text-wrap: nowrap;
+    overflow: hidden;
   }
 
   .splash h1 {
@@ -36,6 +36,21 @@
     .splash h1 {
       font-size: 2.9em;
       font-weight: 500;
+    }
+
+    .splash h2 {
+      font-size: 1.3em;
+    }
+  }
+
+  @media screen and (max-width: 380px) {
+
+    .splash h1 {
+      font-size: 2.8em;
+    }
+
+    .splash h2 {
+      font-size: 1.2em;
     }
   }
 
