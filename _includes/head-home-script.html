@@ -2,34 +2,54 @@
 
   document.addEventListener("DOMContentLoaded", startup);
 
-  var touchStart;
-
   function startup() {
 
     document.addEventListener(
-      "touchstart", scrollToAbout, { passive: false, once: true });
+      "touchmove", removeSplashNav, { passive: true, once: true });
 
     document.addEventListener(
-      "wheel", scrollToAbout, { passive: false, once: true });
+      "wheel", removeSplashNav, { passive: true, once: true });
   }
 
-  // homepage: scroll to about on wheel/swipe down
-  function scrollToAbout() {
+  // homepage: remove navigation, fixed splash size
+  function removeSplashNav() {
+
+    // hide obsolete arrow navigation
+    var arrowElement = document.getElementById('splash-nav');
+    arrowElement.style.visibility = 'hidden';
+
+    // fixed splash size to avoid resizing with iOS menu
+    var splashElement = document.getElementById('splash');
+    splashElement.style.height = splashElement.offsetHeight + 'px';
+
+    // show the rest of the page
+    var aboutElement = document.getElementById('about-us');
+    aboutElement.style.display = "block";
+
+    // do the scroll if directed
+    if (event?.type == "wheel") {
+      window.scrollBy(0, event.deltaY);
+    };
+
+    if (event?.type == "touchmove") {
+      window.scrollBy(0, event.changedTouches[0].deltaY);
+    }
+
+    // remove obsolete event listeners
+    document.removeEventListener("touchstart", TouchEvent);
+    document.removeEventListener("wheel", WheelEvent);
+  }
+
+  // homepage: scroll to about
+  function handleSplashNavClick() {
 
     // scroll to about section
     setTimeout(function () {
 
-      // hide obsolete arrow navigation
-      var arrowElement = document.getElementById('shift-nav');
-      arrowElement.style.visibility = 'hidden';
-
-      // fix splash size
-      var splashElement = document.getElementById('splash');
-      splashElement.style.height = splashElement.offsetHeight + 'px';
+      removeSplashNav();
 
       // scroll to about information
       var aboutElement = document.getElementById('about-us');
-      aboutElement.style.display = "block";
       aboutElement.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
     }, 200);
   }
