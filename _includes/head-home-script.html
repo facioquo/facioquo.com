@@ -7,27 +7,14 @@
   function startup() {
 
     document.addEventListener(
-      "touchstart", handleTouchStart, { passive: false, once: true });
+      "touchstart", scrollToAbout, { passive: false, once: true });
 
-    document.addEventListener("wheel", scrollToAbout, { passive: false, once: true });
-    document.addEventListener("touchend", scrollToAbout, { passive: false, once: true });
-  }
-
-  function handleTouchStart() {
-    touchStart = event.touches[0].clientY;
+    document.addEventListener(
+      "wheel", scrollToAbout, { passive: false, once: true });
   }
 
   // homepage: scroll to about on wheel/swipe down
   function scrollToAbout() {
-
-    // discontinue on wheel up
-    if (event.type == "wheel" && event.deltaY < 0) return;
-
-    // discontinue on touch up
-    if (event.type == "touchend") {
-      var touchEnd = event.changedTouches[0].clientY;
-      if (touchEnd > touchStart) return;
-    }
 
     // scroll to about section
     setTimeout(function () {
@@ -35,6 +22,10 @@
       // hide obsolete arrow navigation
       var arrowElement = document.getElementById('shift-nav');
       arrowElement.style.visibility = 'hidden';
+
+      // fix splash size
+      var splashElement = document.getElementById('splash');
+      splashElement.style.height = splashElement.offsetHeight + 'px';
 
       // scroll to about information
       var aboutElement = document.getElementById('about-us');
