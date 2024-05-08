@@ -27,17 +27,17 @@
     aboutElement.style.display = "block";
 
     // do the scroll if directed
-    if (event?.type == "wheel") {
+    if (event != null && event.type == "wheel") {
       window.scrollBy(0, event.deltaY);
-    };
+    }
 
-    if (event?.type == "touchmove") {
+    if (event != null && event.type == "touchmove") {
       window.scrollBy(0, event.changedTouches[0].deltaY);
     }
 
     // remove obsolete event listeners
-    document.removeEventListener("touchstart", TouchEvent);
-    document.removeEventListener("wheel", WheelEvent);
+    document.removeEventListener("touchstart", removeSplashNav);
+    document.removeEventListener("wheel", removeSplashNav);
   }
 
   // homepage: scroll to about
