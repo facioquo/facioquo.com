@@ -3,7 +3,7 @@ title: Privacy policy
 description: >-
   How we protect your information.
 permalink: /privacy
-layout: page
+layout: base
 footer: true
 ---
 
