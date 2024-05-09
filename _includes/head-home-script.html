@@ -1,0 +1,56 @@
+<script defer>
+
+  document.addEventListener("DOMContentLoaded", startup);
+
+  function startup() {
+
+    document.addEventListener(
+      "touchmove", removeSplashNav, { passive: true, once: true });
+
+    document.addEventListener(
+      "wheel", removeSplashNav, { passive: true, once: true });
+  }
+
+  // homepage: remove navigation, fixed splash size
+  function removeSplashNav() {
+
+    // hide obsolete arrow navigation
+    var arrowElement = document.getElementById('splash-nav');
+    arrowElement.style.visibility = 'hidden';
+
+    // fixed splash size to avoid resizing with iOS menu
+    var splashElement = document.getElementById('splash');
+    splashElement.style.height = splashElement.offsetHeight + 'px';
+
+    // show the rest of the page
+    var aboutElement = document.getElementById('about-us');
+    aboutElement.style.display = "block";
+
+    // do the scroll if directed
+    if (event != null && event.type == "wheel") {
+      window.scrollBy(0, event.deltaY);
+    }
+
+    if (event != null && event.type == "touchmove") {
+      window.scrollBy(0, event.changedTouches[0].deltaY);
+    }
+
+    // remove obsolete event listeners
+    document.removeEventListener("touchstart", removeSplashNav);
+    document.removeEventListener("wheel", removeSplashNav);
+  }
+
+  // homepage: scroll to about
+  function handleSplashNavClick() {
+
+    // scroll to about section
+    setTimeout(function () {
+
+      removeSplashNav();
+
+      // scroll to about information
+      var aboutElement = document.getElementById('about-us');
+      aboutElement.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+    }, 200);
+  }
+</script>

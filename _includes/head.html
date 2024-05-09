@@ -4,14 +4,12 @@
   <meta name="robots" content="noindex, nofollow">
   {%- endif -%}
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="msapplication-config" content="assets/icons/browserconfig.xml">
   <meta name="msapplication-TileColor" content="#1b1b1b">
   <meta name="theme-color" content="#1b1b1b">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   {%- seo -%}
 
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400..600&display=swap" />
   <link defer rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400..600&display=swap" />
 
   {%- include head-base-styles.html -%}
@@ -28,12 +26,13 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "image": "https://facioquo.com/assets/social-banner.png",
     "name": "FacioQuo",
-    "url": "https://facioquo.com/",
+    "url": "https://facioquo.com",
     "logo": "https://facioquo.com/assets/logo.svg"
   }
   </script>
-  {%- include utilities.script.html -%}
+  {%- include head-home-script.html -%}
 
   {%- else -%}
   <link defer rel="stylesheet" href="{{ '/assets/css/style.css?v=YYYY.MM.DD' | relative_url }}">
