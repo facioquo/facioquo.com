@@ -16,7 +16,7 @@ jobs:
       BUNDLE_RETRY: 3
 
     environment:
-      name: website
+      name: facioquo.com
 
     steps:
 
@@ -26,9 +26,8 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.3' # Not needed with a .ruby-version file
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 1 # Increment this number if you need to re-download cached gems
+          ruby-version: "3.3"
+          bundler-cache: true
 
       - name: Define tag
         id: tag
@@ -60,4 +59,4 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: ${{ vars.CLOUDFLARE_PROJECT_NAME }}
           directory: _site
-          wranglerVersion: 'latest'
+          wranglerVersion: "latest"
