@@ -5,7 +5,7 @@ group :jekyll_plugins do
   gem 'jekyll-minifier'
   gem 'jekyll-seo-tag'
   gem 'jekyll-sitemap'
-  gem 'jekyll-last-modified-at' # used in sitemap
+  gem 'jekyll-last-modified-at' , '>= 1.3.2' # used in sitemap
 end
 
 # Webrick is needed for ruby > v3.0
