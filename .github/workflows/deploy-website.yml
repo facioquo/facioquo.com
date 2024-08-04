@@ -1,6 +1,6 @@
 name: Deploy website
 
-on: [workflow_dispatch]
+on: workflow_dispatch
 
 concurrency:
   group: ${{ github.ref }}
@@ -26,7 +26,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.3"
+          ruby-version: 3.3
           bundler-cache: true
 
       - name: Define tag
