@@ -1,4 +1,5 @@
 source "https://rubygems.org"
+# local dev: bundle exec jekyll serve -o -l
 
 # jekyll plugins
 group :jekyll_plugins do
@@ -9,4 +10,5 @@ group :jekyll_plugins do
 end
 
 gem 'wdm', '>= 0.2.0' if Gem.win_platform? # windows compatibilty pack
-gem "webrick" # needed for ruby > v3.0
+gem 'webrick' # needed for ruby > v3.0
+gem 'faraday' # reload/retry on file changes
