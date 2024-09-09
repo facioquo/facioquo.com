@@ -85,10 +85,6 @@ GEM
       google-protobuf (~> 4.27)
     terminal-table (3.0.2)
       unicode-display_width (>= 1.1.1, < 3)
-    tzinfo (2.0.6)
-      concurrent-ruby (~> 1.0)
-    tzinfo-data (1.2024.2)
-      tzinfo (>= 1.0.0)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
     unicode-display_width (2.5.0)
@@ -100,15 +96,11 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  http_parser.rb (~> 0.6.0)
   jekyll-last-modified-at
   jekyll-minifier
   jekyll-seo-tag
   jekyll-sitemap
-  kramdown-parser-gfm
-  tzinfo (>= 1, < 3)
-  tzinfo-data
-  wdm (~> 0.2.0)
+  wdm (>= 0.2.0)
   webrick
 
 BUNDLED WITH
