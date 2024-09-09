@@ -7,21 +7,20 @@ on:
 jobs:
   testing:
     name: test a11y
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     env:
       BUNDLE_PATH: "vendor/bundle"
       BUNDLE_JOBS: 4
       BUNDLE_RETRY: 3
 
     steps:
-
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.3"
+          ruby-version: 3.2
           bundler-cache: true
 
       - name: Build site
