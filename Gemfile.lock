@@ -110,7 +110,7 @@ DEPENDENCIES
   jekyll-minifier
   jekyll-seo-tag
   jekyll-sitemap
-  wdm (>= 0.2.0)
+  wdm (~> 0.2.0)
   webrick
 
 BUNDLED WITH
