@@ -54,3 +54,14 @@
     }, 200);
   }
 </script>
+
+{%- if jekyll.environment == 'production' -%}
+<!-- Google Analytics -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-S4GLSZNG8N"></script>
+<script defer>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-S4GLSZNG8N', { cookie_flags: 'SameSite=Lax; Secure' });
+</script>
+{%- endif -%}

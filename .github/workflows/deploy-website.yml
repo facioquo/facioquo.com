@@ -1,6 +1,6 @@
 name: Deploy website
 
-on: [workflow_dispatch]
+on: workflow_dispatch
 
 concurrency:
   group: ${{ github.ref }}
@@ -16,7 +16,8 @@ jobs:
       BUNDLE_RETRY: 3
 
     environment:
-      name: website
+      name: facioquo.com
+      url: ${{ steps.deploy.outputs.deployment-alias-url }}
 
     steps:
 
@@ -26,9 +27,8 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.3' # Not needed with a .ruby-version file
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 1 # Increment this number if you need to re-download cached gems
+          ruby-version: 3.3
+          bundler-cache: true
 
       - name: Define tag
         id: tag
@@ -54,10 +54,12 @@ jobs:
         run: bundle exec jekyll build
 
       - name: Publish to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
+        id: deploy
+        uses: cloudflare/wrangler-action@3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_KEY }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: ${{ vars.CLOUDFLARE_PROJECT_NAME }}
-          directory: _site
-          wranglerVersion: 'latest'
+          wranglerVersion: "latest"
+          command: >
+            pages deploy _site
+            --project-name=${{ vars.CLOUDFLARE_PROJECT_NAME }}
