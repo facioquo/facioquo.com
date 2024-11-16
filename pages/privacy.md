@@ -7,4 +7,4 @@ layout: base
 footer: true
 ---
 
-We are affiliated with [Skender Co.](https://skenderco.com), a U.S. based company.
+We are affiliated with [Skender Co.](https://skenderco.com), a U.S.-based company.
