@@ -1,0 +1,47 @@
+name: Copilot setup steps
+
+# Automatically run the setup steps when they are changed to allow for easy validation,
+# and to allow manual testing through by triggering in the repository's "Actions" tab
+# ref: https://docs.github.com/en/copilot/how-tos/agents/copilot-coding-agent/customizing-the-development-environment-for-copilot-coding-agent
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/copilot-setup-steps.yml
+
+jobs:
+  # The job MUST be called `copilot-setup-steps` or it will not be picked up by Copilot.
+  copilot-setup-steps:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.3
+          bundler-cache: true
+
+      - name: Install Jekyll and dependencies
+        run: |
+          gem install jekyll bundler
+          bundle install
+
+      - name: Build Jekyll site
+        run: |
+          bundle exec jekyll build
+
+      - name: Display environment info
+        run: |
+          echo "=== Environment Setup Complete ==="
+          echo "✅ Ruby Version: $(ruby --version)"
+          echo "✅ Jekyll Version: $(bundle exec jekyll --version)"
+          echo "✅ Bundler Version: $(bundle --version)"
+          echo "✅ Installed Gems:"
+          bundle list
+          echo "=== Ready for Copilot Coding Agent Session ==="
