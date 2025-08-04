@@ -13,7 +13,9 @@ footer: true
 
 ## Introduction
 
-FacioQuo ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services. We are affiliated with [Skender Co.](https://skenderco.com), a U.S.-based company.
+FacioQuo ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect,
+use, disclose, and safeguard your information when you visit our website or use our services.
+We are affiliated with [Skender Co.](https://skenderco.com), a U.S.-based company.
 
 ## Information We Collect
 
@@ -33,7 +35,9 @@ When you visit our website, we may automatically collect:
 - Cookies and similar tracking technologies
 
 ### Analytics and Cookies
-We use analytics services (such as Google Analytics) to understand how our website is used. These services may collect information through cookies and similar technologies. You can control cookie preferences through your browser settings.
+We use analytics services (such as Google Analytics) to understand how our website is used.
+These services may collect information through cookies and similar technologies.
+You can control cookie preferences through your browser settings.
 
 ## How We Use Your Information
 
@@ -55,15 +59,20 @@ We do not sell, trade, or rent your personal information to third parties. We ma
 
 ## Third-Party Services
 
-Our website may contain links to third-party websites or services. This Privacy Policy does not apply to those external sites. We encourage you to review their privacy policies.
+Our website may contain links to third-party websites or services.
+This Privacy Policy does not apply to those external sites.
+We encourage you to review their privacy policies.
 
 ## Data Security
 
-We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure.
+We implement appropriate technical and organizational measures to protect your personal information
+against unauthorized access, alteration, disclosure, or destruction.
+However, no method of transmission over the internet is 100% secure.
 
 ## Data Retention
 
-We retain personal information only as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required by law.
+We retain personal information only as long as necessary to fulfill the purposes outlined in this policy,
+unless a longer retention period is required by law.
 
 ## Your Rights
 
@@ -79,15 +88,19 @@ To exercise these rights, please contact us using the information provided below
 
 ## International Data Transfers
 
-If you are located outside the United States, please note that we may transfer your information to and process it in the United States, where data protection laws may differ from those in your jurisdiction.
+If you are located outside the United States, please note that we may transfer your information to and process it
+in the United States, where data protection laws may differ from those in your jurisdiction.
 
 ## Children's Privacy
 
-Our services are not directed to children under 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected such information, we will take steps to delete it.
+Our services are not directed to children under 13.
+We do not knowingly collect personal information from children under 13.
+If we become aware that we have collected such information, we will take steps to delete it.
 
 ## Changes to This Privacy Policy
 
-We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new policy on this page and updating the "Last updated" date.
+We may update this Privacy Policy from time to time. We will notify you of any material changes
+by posting the new policy on this page and updating the "Last updated" date.
 
 ## Contact Information
 
