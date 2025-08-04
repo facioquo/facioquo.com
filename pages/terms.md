@@ -7,23 +7,21 @@ layout: base
 footer: true
 ---
 
-# Terms of Service
+# Terms of service
 
-*Last updated: August 4, 2025*
-
-## Agreement to Terms
+## Agreement to terms
 
 By accessing or using the FacioQuo website and services ("Services"),
 you agree to be bound by these Terms of Service ("Terms").
 If you do not agree to these Terms, please do not use our Services.
 
-## Description of Services
+## Description of services
 
 FacioQuo provides online tools, microsites, and utility applications.
 We are affiliated with [Skender Co.](https://skenderco.com),
 a U.S.-based company that owns and operates this organization.
 
-## Acceptable Use
+## Acceptable use
 
 You agree to use our Services only for lawful purposes and in accordance with these Terms. You agree not to:
 
@@ -37,7 +35,7 @@ You agree to use our Services only for lawful purposes and in accordance with th
 - Violate intellectual property rights of others
 - Use the Services for spam, harassment, or other harmful activities
 
-## User Content
+## User content
 
 You may be able to submit, upload, or post content through our Services ("User Content").
 You retain ownership of your User Content, but grant us a worldwide, non-exclusive, royalty-free license to use, modify,
@@ -50,7 +48,7 @@ You represent and warrant that:
 
 We reserve the right to remove any User Content that violates these Terms or is otherwise objectionable.
 
-## Intellectual Property Rights
+## Intellectual property rights
 
 The Services and their content, features, and functionality are owned by FacioQuo, Skender Co., or our licensors
 and are protected by intellectual property laws. You may not:
@@ -65,7 +63,7 @@ and are protected by intellectual property laws. You may not:
 Your privacy is important to us. Please review our [Privacy Policy](/privacy),
 which governs how we collect, use, and protect your information.
 
-## Disclaimers and Limitation of Liability
+## Disclaimers and limitation of liability
 
 ### Disclaimers
 The Services are provided "as is" and "as available" without any warranties of any kind.
@@ -74,7 +72,7 @@ We disclaim all warranties, including:
 - Warranties of non-infringement
 - Warranties that the Services will be uninterrupted or error-free
 
-### Limitation of Liability
+### Limitation of liability
 To the maximum extent permitted by law, FacioQuo and Skender Co. shall not be liable for:
 - Any indirect, incidental, special, or consequential damages
 - Loss of profits, data, or business opportunities
@@ -101,7 +99,7 @@ Upon termination:
 - We may delete your account and User Content
 - Provisions that should survive termination will remain in effect
 
-## Changes to Services and Terms
+## Changes to services and terms
 
 We reserve the right to:
 - Modify or discontinue the Services at any time
@@ -111,18 +109,18 @@ We reserve the right to:
 Material changes will be effective 30 days after posting.
 Your continued use constitutes acceptance of the updated Terms.
 
-## Geographic Restrictions
+## Geographic restrictions
 
 The Services are intended for users in jurisdictions where such services are legal.
 You are responsible for compliance with local laws.
 
-## Dispute Resolution
+## Dispute resolution
 
-### Governing Law
+### Governing law
 These Terms are governed by the laws of the United States and the state where Skender Co. is headquartered,
 without regard to conflict of law principles.
 
-### Dispute Resolution Process
+### Dispute resolution process
 Before filing any legal action, you agree to attempt to resolve disputes through:
 1. Direct communication with us
 2. Good faith negotiation
@@ -136,12 +134,12 @@ Any legal action must be filed in the courts having jurisdiction over Skender Co
 If any provision of these Terms is found to be invalid or unenforceable,
 the remaining provisions will remain in full force and effect.
 
-## Entire Agreement
+## Entire agreement
 
 These Terms, together with our Privacy Policy, constitute the entire agreement
 between you and FacioQuo regarding the Services.
 
-## Contact Information
+## Contact information
 
 If you have questions about these Terms, please contact us:
 
@@ -153,7 +151,10 @@ For legal entity inquiries:
 **Skender Co.**  
 Website: [skenderco.com](https://skenderco.com)
 
-## Additional Terms for Specific Services
+## Additional terms for specific services
 
 Certain Services may have additional terms and conditions. Those additional terms will be presented to you
 before you use those specific Services and will supplement these Terms.
+
+---
+*Last updated: August 4, 2025*

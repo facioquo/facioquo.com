@@ -7,9 +7,7 @@ layout: base
 footer: true
 ---
 
-# Privacy Policy
-
-*Last updated: August 4, 2025*
+# Privacy policy
 
 ## Introduction
 
@@ -17,15 +15,15 @@ FacioQuo ("we," "our," or "us") is committed to protecting your privacy. This Pr
 use, disclose, and safeguard your information when you visit our website or use our services.
 We are affiliated with [Skender Co.](https://skenderco.com), a U.S.-based company.
 
-## Information We Collect
+## Information we collect
 
-### Personal Information
+### Personal information
 We may collect personal information that you provide directly to us, including:
 - Name and contact information when you contact us
 - Email address for communications
 - Any information you provide in forms or communications
 
-### Automatically Collected Information
+### Automatically collected information
 When you visit our website, we may automatically collect:
 - IP address and device information
 - Browser type and version
@@ -34,12 +32,12 @@ When you visit our website, we may automatically collect:
 - Referring website addresses
 - Cookies and similar tracking technologies
 
-### Analytics and Cookies
+### Analytics and cookies
 We use analytics services (such as Google Analytics) to understand how our website is used.
 These services may collect information through cookies and similar technologies.
 You can control cookie preferences through your browser settings.
 
-## How We Use Your Information
+## How we use your information
 
 We use collected information for:
 - Providing and improving our services
@@ -48,7 +46,7 @@ We use collected information for:
 - Legal compliance and security
 - Protecting our rights and interests
 
-## Information Sharing and Disclosure
+## Information sharing and disclosure
 
 We do not sell, trade, or rent your personal information to third parties. We may share information:
 - With service providers who assist in our operations
@@ -57,24 +55,24 @@ We do not sell, trade, or rent your personal information to third parties. We ma
 - In connection with business transfers or restructuring
 - With your consent
 
-## Third-Party Services
+## Third-party services
 
 Our website may contain links to third-party websites or services.
 This Privacy Policy does not apply to those external sites.
 We encourage you to review their privacy policies.
 
-## Data Security
+## Data security
 
 We implement appropriate technical and organizational measures to protect your personal information
 against unauthorized access, alteration, disclosure, or destruction.
 However, no method of transmission over the internet is 100% secure.
 
-## Data Retention
+## Data retention
 
 We retain personal information only as long as necessary to fulfill the purposes outlined in this policy,
 unless a longer retention period is required by law.
 
-## Your Rights
+## Your rights
 
 Depending on your location, you may have certain rights regarding your personal information:
 - **Access**: Request access to your personal information
@@ -86,23 +84,23 @@ Depending on your location, you may have certain rights regarding your personal 
 
 To exercise these rights, please contact us using the information provided below.
 
-## International Data Transfers
+## International data transfers
 
 If you are located outside the United States, please note that we may transfer your information to and process it
 in the United States, where data protection laws may differ from those in your jurisdiction.
 
-## Children's Privacy
+## Children's privacy
 
 Our services are not directed to children under 13.
 We do not knowingly collect personal information from children under 13.
 If we become aware that we have collected such information, we will take steps to delete it.
 
-## Changes to This Privacy Policy
+## Changes to this privacy policy
 
 We may update this Privacy Policy from time to time. We will notify you of any material changes
 by posting the new policy on this page and updating the "Last updated" date.
 
-## Contact Information
+## Contact information
 
 If you have questions about this Privacy Policy or our privacy practices, please contact us:
 
@@ -114,10 +112,13 @@ For legal entity inquiries:
 **Skender Co.**  
 Website: [skenderco.com](https://skenderco.com)
 
-## Legal Basis for Processing (EU Users)
+## Legal basis for processing (EU users)
 
 If you are located in the European Union, our legal basis for processing your personal information includes:
 - **Consent**: Where you have given clear consent
 - **Contract**: Where processing is necessary for contract performance
 - **Legal Obligation**: Where processing is required by law
 - **Legitimate Interest**: Where we have a legitimate business interest
+
+---
+*Last updated: August 4, 2025*
