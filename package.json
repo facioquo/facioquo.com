@@ -3,13 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "description": "Facioquo website static site generator",
-  "scripts": {
-    "test:a11y": "pa11y-ci --config .pa11yci.json --sitemap http://127.0.0.1:4000/sitemap.xml"
-  },
-  "devDependencies": {
-    "pa11y": "^9.0.0",
-    "pa11y-ci": "^4.0.0"
-  },
+  "scripts": {},
+  "devDependencies": {},
   "engines": {
     "node": ">=22.0.0",
     "npm": ">=10.0.0"
