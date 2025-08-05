@@ -18,13 +18,17 @@ We are affiliated with [Skender Co.](https://skenderco.com), a U.S.-based compan
 ## Information we collect
 
 ### Personal information
+
 We may collect personal information that you provide directly to us, including:
+
 - Name and contact information when you contact us
 - Email address for communications
 - Any information you provide in forms or communications
 
 ### Automatically collected information
+
 When you visit our website, we may automatically collect:
+
 - IP address and device information
 - Browser type and version
 - Operating system
@@ -33,6 +37,7 @@ When you visit our website, we may automatically collect:
 - Cookies and similar tracking technologies
 
 ### Analytics and cookies
+
 We use analytics services (such as Google Analytics) to understand how our website is used.
 These services may collect information through cookies and similar technologies.
 You can control cookie preferences through your browser settings.
@@ -40,6 +45,7 @@ You can control cookie preferences through your browser settings.
 ## How we use your information
 
 We use collected information for:
+
 - Providing and improving our services
 - Responding to your inquiries and communications
 - Website analytics and optimization
@@ -49,6 +55,7 @@ We use collected information for:
 ## Information sharing and disclosure
 
 We do not sell, trade, or rent your personal information to third parties. We may share information:
+
 - With service providers who assist in our operations
 - When required by law or legal process
 - To protect our rights, property, or safety
@@ -75,6 +82,7 @@ unless a longer retention period is required by law.
 ## Your rights
 
 Depending on your location, you may have certain rights regarding your personal information:
+
 - **Access**: Request access to your personal information
 - **Correction**: Request correction of inaccurate information
 - **Deletion**: Request deletion of your personal information
@@ -105,7 +113,7 @@ by posting the new policy on this page and updating the "Last updated" date.
 If you have questions about this Privacy Policy or our privacy practices, please contact us:
 
 **FacioQuo**  
-Email: info@facioquo.com  
+Email: <info@facioquo.com>  
 Website: [facioquo.com](https://facioquo.com)
 
 For legal entity inquiries:  
@@ -115,10 +123,12 @@ Website: [skenderco.com](https://skenderco.com)
 ## Legal basis for processing (EU users)
 
 If you are located in the European Union, our legal basis for processing your personal information includes:
+
 - **Consent**: Where you have given clear consent
 - **Contract**: Where processing is necessary for contract performance
 - **Legal Obligation**: Where processing is required by law
 - **Legitimate Interest**: Where we have a legitimate business interest
 
 ---
-*Last updated: August 4, 2025*
+
+**Last updated: August 4, 2025**

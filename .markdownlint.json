@@ -1,0 +1,10 @@
+{
+  "MD025": {
+    "front_matter_title": "^\\s*title\\s*[:=]"
+  },
+  "MD041": {
+    "front_matter_title": "^\\s*title\\s*[:=]"
+  },
+  "MD036": false,
+  "MD013": false
+}

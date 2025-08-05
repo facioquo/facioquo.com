@@ -42,6 +42,7 @@ You retain ownership of your User Content, but grant us a worldwide, non-exclusi
 and display your User Content in connection with providing the Services.
 
 You represent and warrant that:
+
 - You own or have the right to use any User Content you submit
 - Your User Content does not violate any laws or third-party rights
 - Your User Content is not defamatory, obscene, or otherwise objectionable
@@ -66,14 +67,18 @@ which governs how we collect, use, and protect your information.
 ## Disclaimers and limitation of liability
 
 ### Disclaimers
+
 The Services are provided "as is" and "as available" without any warranties of any kind.
 We disclaim all warranties, including:
+
 - Implied warranties of merchantability and fitness for a particular purpose
 - Warranties of non-infringement
 - Warranties that the Services will be uninterrupted or error-free
 
 ### Limitation of liability
+
 To the maximum extent permitted by law, FacioQuo and Skender Co. shall not be liable for:
+
 - Any indirect, incidental, special, or consequential damages
 - Loss of profits, data, or business opportunities
 - Any damages exceeding the amount you paid for the Services (if any)
@@ -84,6 +89,7 @@ This limitation applies even if we have been advised of the possibility of such 
 
 You agree to indemnify and hold harmless FacioQuo, Skender Co., and our affiliates
 from any claims, damages, or expenses arising from:
+
 - Your use of the Services
 - Your violation of these Terms
 - Your violation of any third-party rights
@@ -95,6 +101,7 @@ We may suspend or terminate your access to the Services at any time, with or wit
 You may stop using the Services at any time.
 
 Upon termination:
+
 - Your right to use the Services immediately ceases
 - We may delete your account and User Content
 - Provisions that should survive termination will remain in effect
@@ -102,6 +109,7 @@ Upon termination:
 ## Changes to services and terms
 
 We reserve the right to:
+
 - Modify or discontinue the Services at any time
 - Update these Terms by posting the revised version on our website
 - Change our fees or pricing (if applicable)
@@ -117,16 +125,20 @@ You are responsible for compliance with local laws.
 ## Dispute resolution
 
 ### Governing law
+
 These Terms are governed by the laws of the United States and the state where Skender Co. is headquartered,
 without regard to conflict of law principles.
 
 ### Dispute resolution process
+
 Before filing any legal action, you agree to attempt to resolve disputes through:
+
 1. Direct communication with us
 2. Good faith negotiation
 3. Mediation, if necessary
 
 ### Jurisdiction
+
 Any legal action must be filed in the courts having jurisdiction over Skender Co.'s principal place of business.
 
 ## Severability
@@ -144,7 +156,7 @@ between you and FacioQuo regarding the Services.
 If you have questions about these Terms, please contact us:
 
 **FacioQuo**  
-Email: info@facioquo.com  
+Email: <info@facioquo.com>  
 Website: [facioquo.com](https://facioquo.com)
 
 For legal entity inquiries:  
@@ -157,4 +169,4 @@ Certain Services may have additional terms and conditions. Those additional term
 before you use those specific Services and will supplement these Terms.
 
 ---
-*Last updated: August 4, 2025*
+**Last updated: August 4, 2025**
