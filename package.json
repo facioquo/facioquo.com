@@ -4,7 +4,7 @@
   "private": true,
   "description": "Facioquo website static site generator",
   "scripts": {
-    "test:a11y": "pa11y-ci --sitemap http://127.0.0.1:4000/sitemap.xml"
+    "test:a11y": "pa11y-ci --config .pa11yci.json --sitemap http://127.0.0.1:4000/sitemap.xml"
   },
   "devDependencies": {
     "pa11y": "^9.0.0",

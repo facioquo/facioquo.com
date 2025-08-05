@@ -32,6 +32,27 @@ jobs:
       - name: Install Node dependencies
         run: npm ci || npm install
 
+      - name: Install Chrome dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            fonts-liberation \
+            libasound2 \
+            libatk-bridge2.0-0 \
+            libatk1.0-0 \
+            libatspi2.0-0 \
+            libcairo-gobject2 \
+            libdrm2 \
+            libgtk-3-0 \
+            libnspr4 \
+            libnss3 \
+            libxcomposite1 \
+            libxdamage1 \
+            libxfixes3 \
+            libxkbcommon0 \
+            libxrandr2 \
+            xdg-utils
+
       - name: Build site
         run: bundle exec jekyll build
 
@@ -39,10 +60,13 @@ jobs:
         run: bundle exec jekyll serve --detach
 
       - name: Wait for site to be ready
-        run: sleep 5 && curl -sSf http://127.0.0.1:4000/ > /dev/null
+        run: sleep 10 && curl -sSf http://127.0.0.1:4000/ > /dev/null
 
       - name: Show environment
         run: npx pa11y --environment
 
       - name: Test accessibility
         run: npm run test:a11y
+        env:
+          # Configure Puppeteer for CI environment
+          PUPPETEER_ARGS: '--no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage'
