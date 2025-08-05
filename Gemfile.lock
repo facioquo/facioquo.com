@@ -112,6 +112,7 @@ PLATFORMS
 
 DEPENDENCIES
   faraday
+  jekyll (~> 4.4)
   jekyll-last-modified-at
   jekyll-minifier
   jekyll-seo-tag
