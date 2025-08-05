@@ -113,7 +113,7 @@ by posting the new policy on this page and updating the "Last updated" date.
 If you have questions about this Privacy Policy or our privacy practices, please contact us:
 
 **FacioQuo**  
-Contact: [submit inquiry](https://bit.ly/3ZT6AMJ)
+Contact: [submit inquiry](https://bit.ly/3ZT6AMJ)  
 Website: [facioquo.com](https://facioquo.com)
 
 For legal entity inquiries:  

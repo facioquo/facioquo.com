@@ -156,7 +156,7 @@ between you and FacioQuo regarding the Services.
 If you have questions about these Terms, please contact us:
 
 **FacioQuo**  
-Contact: [submit inquiry](https://bit.ly/3ZT6AMJ)
+Contact: [submit inquiry](https://bit.ly/3ZT6AMJ)  
 Website: [facioquo.com](https://facioquo.com)
 
 For legal entity inquiries:  
