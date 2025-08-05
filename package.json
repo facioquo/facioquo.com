@@ -1,0 +1,12 @@
+{
+  "name": "facioquo-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Facioquo website static site generator",
+  "scripts": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.0.0"
+  }
+}

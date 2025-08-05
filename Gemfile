@@ -1,6 +1,8 @@
 source "https://rubygems.org"
 # local dev: bundle exec jekyll serve -o -l
 
+gem "jekyll", "~> 4.4"
+
 # jekyll plugins
 group :jekyll_plugins do
   gem 'jekyll-minifier'
