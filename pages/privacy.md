@@ -130,4 +130,4 @@ If you are located in the European Union, our legal basis for processing your pe
 - **Legitimate Interest**: Where we have a legitimate business interest
 
 ---
-**Last updated: August 4, 2025**
+Last updated: August 4, 2025

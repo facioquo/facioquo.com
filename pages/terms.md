@@ -169,4 +169,4 @@ Certain Services may have additional terms and conditions. Those additional term
 before you use those specific Services and will supplement these Terms.
 
 ---
-**Last updated: August 4, 2025**
+Last updated: August 4, 2025
