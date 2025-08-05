@@ -26,17 +26,20 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '>=22'
+          node-version: '22'
           cache: 'npm'
 
       - name: Install Node dependencies
-        run: npm ci
+        run: npm ci || npm install
 
       - name: Build site
         run: bundle exec jekyll build
 
       - name: Serve site
         run: bundle exec jekyll serve --detach
+
+      - name: Wait for site to be ready
+        run: sleep 5 && curl -sSf http://127.0.0.1:4000/ > /dev/null
 
       - name: Show environment
         run: npx pa11y --environment
