@@ -126,7 +126,7 @@ You are responsible for compliance with local laws.
 
 ### Governing law
 
-These Terms are governed by the laws of the United States and the state where Skender Co. is headquartered,
+These Terms are governed by the laws of the United States and the state of {{ site.organization.state }},
 without regard to conflict of law principles.
 
 ### Dispute resolution process
@@ -139,7 +139,7 @@ Before filing any legal action, you agree to attempt to resolve disputes through
 
 ### Jurisdiction
 
-Any legal action must be filed in the courts having jurisdiction over Skender Co.'s principal place of business.
+Any legal action must be filed in the courts having jurisdiction over {{ site.organization.state }}.
 
 ## Severability
 

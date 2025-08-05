@@ -17,6 +17,7 @@ image:
 organization:
   name: FacioQuo
   contact_url: https://bit.ly/3ZT6AMJ
+  state: Maryland
 
 # Build settings
 plugins:

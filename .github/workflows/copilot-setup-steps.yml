@@ -27,9 +27,8 @@ jobs:
           ruby-version: 3.3
           bundler-cache: true
 
-      - name: Install Jekyll and dependencies
+      - name: Install dependencies
         run: |
-          gem install jekyll bundler
           bundle install
 
       - name: Build Jekyll site
