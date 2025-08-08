@@ -5,6 +5,7 @@
 **FacioQuo.com** is the top-level website for the FacioQuo organization, a Jekyll-based static website hosted on Cloudflare Pages. This is a small, focused codebase (~1,200 lines total) that builds and deploys reliably.
 
 ### High-Level Details
+
 - **Purpose**: Organizational website with landing page, privacy policy, and terms of service
 - **Size**: Small repository (~20 files, 1,200 lines total)
 - **Type**: Static website
@@ -16,10 +17,12 @@
 ## Build Instructions
 
 ### Prerequisites
+
 - Ruby 3.3 (verified working version)
 - Bundler 2.5+ (dependency management)
 
 ### Environment Setup
+
 **ALWAYS run these commands in order for any development work:**
 
 ```bash
@@ -33,6 +36,7 @@ bundle list
 ### Core Development Commands
 
 #### Build the Site
+
 ```bash
 # Production build (most common)
 bundle exec jekyll build
@@ -43,6 +47,7 @@ bundle exec jekyll build
 ```
 
 #### Local Development Server
+
 ```bash
 # Start development server (port 4000)
 bundle exec jekyll serve
@@ -52,6 +57,7 @@ bundle exec jekyll serve -o -l
 ```
 
 #### Verify Versions
+
 ```bash
 # Check tool versions
 ruby --version          # Should be 3.3.x
@@ -60,12 +66,14 @@ bundle exec jekyll --version  # Should be 4.4.x
 ```
 
 ### Build Validation
+
 - **Build Output**: Generated files appear in `_site/` directory
 - **Expected Files**: index.html, privacy.html, terms.html, 404.html, assets/, sitemap.xml
 - **Build Time**: Should complete in under 1 second
 - **No Errors**: Jekyll build should complete without warnings
 
 ### Common Issues and Solutions
+
 - **Bundle install fails**: Ensure Ruby 3.3 is installed
 - **Jekyll serve port conflict**: Use `bundle exec jekyll serve -P 4001` for alternate port
 - **Stale cache issues**: Delete `.jekyll-cache` and `_site` directories
@@ -73,7 +81,8 @@ bundle exec jekyll --version  # Should be 4.4.x
 ## Project Layout and Architecture
 
 ### Core Directory Structure
-```
+
+```text
 /
 ├── _config.yml           # Jekyll configuration
 ├── Gemfile              # Ruby dependencies
@@ -103,6 +112,7 @@ bundle exec jekyll --version  # Should be 4.4.x
 ```
 
 ### Key Configuration Files
+
 - **_config.yml**: Jekyll settings, plugins, SEO configuration
 - **Gemfile**: Ruby dependencies (Jekyll 4.4, plugins)
 - **.editorconfig**: Code formatting rules (2-space indents)
@@ -110,6 +120,7 @@ bundle exec jekyll --version  # Should be 4.4.x
 - **_headers**: Cloudflare Pages headers configuration
 
 ### Content Architecture
+
 - **Homepage**: `/pages/home.html` → `/` (splash page with JavaScript navigation)
 - **Static Pages**: Markdown files in `/pages/` with front matter
 - **Layouts**: All pages use `layout: base` from `_layouts/base.html`
@@ -119,6 +130,7 @@ bundle exec jekyll --version  # Should be 4.4.x
 ## Continuous Integration and Validation
 
 ### GitHub Actions Workflows
+
 1. **deploy-website.yml** (Manual trigger only)
    - Builds Jekyll site for production/preview
    - Deploys to Cloudflare Pages
@@ -134,7 +146,9 @@ bundle exec jekyll --version  # Should be 4.4.x
    - Validates environment works correctly
 
 ### Pre-commit Validation Steps
+
 Run these before committing changes:
+
 ```bash
 # 1. Test clean build
 rm -rf _site .jekyll-cache
@@ -149,6 +163,7 @@ bundle exec jekyll serve
 ```
 
 ### PR Requirements
+
 - **Title Format**: Must follow conventional commits (enforced by workflow)
 - **Build Success**: Site must build without errors
 - **No Breaking Changes**: Existing functionality must be preserved
@@ -156,28 +171,33 @@ bundle exec jekyll serve
 ## File Dependencies and Architecture Notes
 
 ### CSS/SCSS Pipeline
+
 - Entry: `assets/css/style.scss` (with Jekyll front matter)
 - Imports: `_sass/initialize.scss` → individual `_sass/_*.scss` files
 - Output: Minified CSS in `_site/assets/css/style.css`
 
 ### JavaScript Architecture
+
 - **Minimal JS**: Only homepage navigation and iOS Safari fixes
 - **Inline Scripts**: Embedded in `_includes/head-home-script.html`
 - **No Build Process**: JavaScript is served as-written
 
 ### Jekyll Plugin Dependencies
+
 - **jekyll-minifier**: Compresses HTML/CSS/JS output
 - **jekyll-seo-tag**: Generates meta tags for SEO
 - **jekyll-sitemap**: Auto-generates sitemap.xml
 - **jekyll-last-modified-at**: Adds last-modified dates
 
 ### External Dependencies
+
 - **Cloudflare Pages**: Hosting and CDN
 - **GitHub Actions**: CI/CD pipeline
 - **Bundler**: Ruby dependency management
 
 ## Root Directory Files
-```
+
+```text
 .editorconfig           # Editor configuration
 .gitignore             # Git ignore rules  
 .markdownlint.json     # Markdown linting config
@@ -201,3 +221,37 @@ _headers               # Cloudflare Pages headers
 7. **PR Titles**: Must follow conventional commits format with uppercase subject
 
 **Search only if instructions are incomplete or incorrect.**
+
+## Maintaining These Instructions
+
+**IMPORTANT**: When making changes to the repository that affect these instructions, agents MUST update this documentation to keep it accurate and useful.
+
+### When to Update These Instructions
+
+Update this file when you make changes to:
+
+- **Build process**: Dependencies, commands, or requirements
+- **Project structure**: New directories, moved files, or architectural changes  
+- **GitHub Actions workflows**: New workflows, changed triggers, or validation steps
+- **Development tools**: Linting rules, testing frameworks, or deployment processes
+- **Dependencies**: Version updates, new plugins, or removed packages
+
+### How to Update
+
+1. **Read the instructions thoroughly** before making changes
+2. **Update relevant sections** that are affected by your changes
+3. **Test all documented commands** to ensure they still work
+4. **Verify the build process** follows the documented steps exactly
+5. **Update version numbers** and tool requirements if they change
+6. **Maintain the same tone and detail level** as existing documentation
+
+### Validation
+
+After updating these instructions:
+
+- Run `markdownlint .github/copilot-instructions.md` to check formatting
+- Test the documented build process from a clean environment
+- Verify all referenced files and directories still exist
+- Ensure command examples are accurate and complete
+
+**Remember**: These instructions save significant time for future agents. Keep them comprehensive, accurate, and easy to follow.
