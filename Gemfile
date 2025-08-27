@@ -1,16 +1,18 @@
 source "https://rubygems.org"
-# local dev: bundle exec jekyll serve -o -l
 
 gem "jekyll", "~> 4.4"
 
 # jekyll plugins
 group :jekyll_plugins do
-  gem 'jekyll-minifier'
-  gem 'jekyll-seo-tag'
-  gem 'jekyll-sitemap'
-  gem 'jekyll-last-modified-at' # used in sitemap
+  gem "jekyll-last-modified-at" # used in sitemap
+  gem "jekyll-minifier"
+  gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
 end
 
-gem "wdm", "~> 0.2.0", :platforms => [:mingw, :x64_mingw, :mswin] # windows compatibility
-gem 'webrick' # needed for ruby > v3.0
-gem 'faraday' # reload/retry on file changes
+platforms :mingw, :mswin, :x64_mingw do
+  gem "wdm", ">= 0.2.0" # windows compatibility pack
+end
+
+gem "faraday"           # HTTP client (indirect dep for some plugins/APIs)
+gem "webrick"           # needed for ruby > v3.0
