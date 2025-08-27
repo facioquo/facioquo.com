@@ -2,7 +2,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Install: Ruby Packages",
+      "label": "Install: Ruby Gem packages",
       "type": "shell",
       "command": "bundle install --jobs 4 && bundle clean --force",
       "options": {
@@ -16,7 +16,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Update: Ruby Packages",
+      "label": "Update: Ruby Gem packages",
       "type": "shell",
       "command": "bundle update --conservative && bundle clean --force",
       "options": {
@@ -26,6 +26,8 @@
           "BUNDLE_PATH": "${workspaceFolder}/vendor/bundle"
         }
       },
+      "dependsOn": "Install: Ruby Gem packages",
+      "dependsOrder": "sequence",
       "group": "none",
       "problemMatcher": []
     },
@@ -33,8 +35,6 @@
       "label": "Run: Website with LiveReload",
       "type": "shell",
       "command": "bundle exec jekyll serve --livereload --open-url",
-      "dependsOn": "Install: Ruby Packages",
-      "dependsOrder": "sequence",
       "isBackground": true,
       "options": {
         "cwd": "${workspaceFolder}",
@@ -43,6 +43,8 @@
           "BUNDLE_PATH": "${workspaceFolder}/vendor/bundle"
         }
       },
+      "dependsOn": "Install: Ruby Gem packages",
+      "dependsOrder": "sequence",
       "group": "none",
       "problemMatcher": []
     }

@@ -5,6 +5,9 @@
 <body>
   <main aria-label="Content" id="main-content">
     {{ content }}
+    {%- if page.last_updated -%}
+    <div class="page-last-updated">Last updated: {{ page.last_updated }}</div>
+    {%- endif -%}
   </main>
   {%- include footer.html -%}
 </body>

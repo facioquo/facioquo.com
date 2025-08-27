@@ -3,6 +3,7 @@ title: Terms of service
 description: >-
   Terms and conditions for using our services.
 permalink: /terms
+last_updated: August 4, 2025
 layout: base
 footer: true
 ---
@@ -167,6 +168,3 @@ Website: [skenderco.com](https://skenderco.com)
 
 Certain Services may have additional terms and conditions. Those additional terms will be presented to you
 before you use those specific Services and will supplement these Terms.
-
----
-Last updated: August 4, 2025

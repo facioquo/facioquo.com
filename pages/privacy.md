@@ -3,6 +3,7 @@ title: Privacy policy
 description: >-
   How we protect your information.
 permalink: /privacy
+last_updated: August 4, 2025
 layout: base
 footer: true
 ---
@@ -128,6 +129,3 @@ If you are located in the European Union, our legal basis for processing your pe
 - **Contract**: Where processing is necessary for contract performance
 - **Legal Obligation**: Where processing is required by law
 - **Legitimate Interest**: Where we have a legitimate business interest
-
----
-Last updated: August 4, 2025
