@@ -3,7 +3,7 @@ title: Terms of service
 description: >-
   Terms and conditions for using our services.
 permalink: /terms
-last_updated: August 4, 2025
+last_updated: 2025-08-04
 layout: base
 footer: true
 ---
