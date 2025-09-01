@@ -1,16 +1,21 @@
 {
-  // Files to include/exclude
   "globs": [
-    "!**/*",
-    "pages/**/*.md",
-    "_includes/**/*..md",
-    "_layouts/**/*..md",
-    "README.md",
-    ".github/**/*.md"
+    "**/*.md",
+    "**/*.markdown"
+  ],
+  "ignores": [
+    "_site/**",
+    ".jekyll-cache/**",
+    "node_modules/**",
+    "vendor/**"
   ],
   "config": {
+    "default": true,
     "MD003": {
       "style": "atx"
+    },
+    "MD004": {
+      "style": "dash"
     },
     "MD007": {
       "indent": 2
@@ -18,6 +23,11 @@
     "MD013": false,
     "MD025": false,
     "MD033": false,
-    "MD034": false
+    "MD046": {
+      "style": "fenced"
+    },
+    "MD048": {
+      "style": "backtick"
+    }
   }
 }
