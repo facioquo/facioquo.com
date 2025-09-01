@@ -7,19 +7,19 @@
 ### High-Level Details
 
 - **Purpose**: Organizational website with landing page, privacy policy, and terms of service
-- **Size**: Small repository (~20 files, 1,200 lines total)
+- **Size**: Small repository (~20 files, ~1,200 lines total)
 - **Type**: Static website
 - **Languages**: Jekyll (Ruby), HTML, SCSS, JavaScript
-- **Framework**: Jekyll 4.4 with Ruby 3.3
+- **Framework**: Jekyll 4.4.1 with Ruby 3.3
 - **Runtime**: Static files served via Cloudflare Pages
-- **Build Time**: Very fast (~0.1 seconds)
+- **Build Time**: Very fast (local builds typically complete in << 1s on CI)
 
 ## Build Instructions
 
 ### Prerequisites
 
-- Ruby 3.3 (verified working version)
-- Bundler 2.5+ (dependency management)
+- Ruby 3.3 (recommended)
+- Bundler 2.5.18 (project is locked with Bundler 2.5.18 in Gemfile.lock)
 
 ### Environment Setup
 
@@ -27,7 +27,7 @@
 
 ```bash
 # 1. Install dependencies (ALWAYS run first)
-bundle install
+bundle install --jobs 4 && bundle clean --force
 
 # 2. Verify installation worked
 bundle list
@@ -52,8 +52,8 @@ bundle exec jekyll build
 # Start development server (port 4000)
 bundle exec jekyll serve
 
-# With live reload and auto-open browser
-bundle exec jekyll serve -o -l
+# With live reload and auto-open browser (this repo recommends --livereload and --open-url)
+bundle exec jekyll serve --livereload --open-url
 ```
 
 #### Verify Versions
@@ -69,7 +69,7 @@ bundle exec jekyll --version  # Should be 4.4.x
 
 - **Build Output**: Generated files appear in `_site/` directory
 - **Expected Files**: index.html, privacy.html, terms.html, 404.html, assets/, sitemap.xml
-- **Build Time**: Should complete in under 1 second
+- **Build Time**: Local builds are fast; CI runs on `ubuntu-latest` with Ruby 3.3
 - **No Errors**: Jekyll build should complete without warnings
 
 ### Common Issues and Solutions
@@ -113,11 +113,11 @@ bundle exec jekyll --version  # Should be 4.4.x
 
 ### Key Configuration Files
 
-- **_config.yml**: Jekyll settings, plugins, SEO configuration
+- **\_config.yml**: Jekyll settings, plugins, SEO configuration
 - **Gemfile**: Ruby dependencies (Jekyll 4.4, plugins)
 - **.editorconfig**: Code formatting rules (2-space indents)
 - **.markdownlint.json**: Markdown linting rules
-- **_headers**: Cloudflare Pages headers configuration
+- **\_headers**: Cloudflare Pages headers configuration
 
 ### Content Architecture
 
@@ -127,23 +127,24 @@ bundle exec jekyll --version  # Should be 4.4.x
 - **Styling**: SCSS files in `_sass/` compiled via `assets/css/style.scss`
 - **Scripts**: Inline JavaScript in `_includes/head-home-script.html`
 
-## Continuous Integration and Validation
+### Continuous Integration and Validation
 
 ### GitHub Actions Workflows
 
 1. **deploy-website.yml** (Manual trigger only)
-   - Builds Jekyll site for production/preview
-   - Deploys to Cloudflare Pages
-   - Uses Ruby 3.3, sets JEKYLL_ENV environment
+
+   - Builds Jekyll site for production/preview and publishes to Cloudflare Pages
+   - Uses Ruby 3.3 (set via ruby/setup-ruby@v1) and caches Bundler
+   - Runs `bundle exec jekyll build` and then `cloudflare/wrangler-action@v3` to deploy `_site`
 
 2. **lint-pull-request.yml** (Automatic on PRs)
-   - Validates PR titles follow conventional commits format
-   - Examples: "feat: New feature", "fix: Bug fix", "docs: Documentation"
-   - Subject must start with uppercase letter
+
+   - Validates PR titles follow a conventional-commit-like format
+   - Enforces the PR subject starts with an uppercase character
 
 3. **copilot-setup-steps.yml** (Setup validation)
-   - Runs: bundle install → bundle exec jekyll build
-   - Validates environment works correctly
+   - Runs `bundle install` then `bundle exec jekyll build` to verify environment
+   - Workflow expects `ruby 3.3` and `bundler` available
 
 ### Pre-commit Validation Steps
 
@@ -199,7 +200,7 @@ bundle exec jekyll serve
 
 ```text
 .editorconfig           # Editor configuration
-.gitignore             # Git ignore rules  
+.gitignore             # Git ignore rules
 .markdownlint.json     # Markdown linting config
 Gemfile                # Ruby dependencies
 Gemfile.lock           # Locked dependency versions
@@ -231,7 +232,7 @@ _headers               # Cloudflare Pages headers
 Update this file when you make changes to:
 
 - **Build process**: Dependencies, commands, or requirements
-- **Project structure**: New directories, moved files, or architectural changes  
+- **Project structure**: New directories, moved files, or architectural changes
 - **GitHub Actions workflows**: New workflows, changed triggers, or validation steps
 - **Development tools**: Linting rules, testing frameworks, or deployment processes
 - **Dependencies**: Version updates, new plugins, or removed packages
