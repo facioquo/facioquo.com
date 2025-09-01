@@ -5,6 +5,9 @@ on: workflow_dispatch
 concurrency:
   group: ${{ github.ref }}
 
+permissions:
+  contents: read
+
 jobs:
   deploy:
     name: Cloudflare Pages
@@ -14,6 +17,7 @@ jobs:
       BUNDLE_PATH: "vendor/bundle"
       BUNDLE_JOBS: 4
       BUNDLE_RETRY: 3
+      BUNDLE_GEMFILE: Gemfile
 
     environment:
       name: facioquo.com

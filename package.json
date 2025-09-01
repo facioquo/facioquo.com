@@ -1,0 +1,15 @@
+{
+  "name": "facioquo.com",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "devDependencies": {
+    "markdownlint-cli2": "^0.18.1"
+  },
+  "scripts": {
+    "lint:md": "markdownlint-cli2",
+    "fix:md": "markdownlint-cli2 --fix"
+  }
+}

@@ -17,9 +17,25 @@ jobs:
     permissions:
       contents: read
 
+    env:
+      BUNDLE_PATH: "vendor/bundle"
+      BUNDLE_JOBS: 4
+      BUNDLE_RETRY: 3
+      BUNDLE_GEMFILE: Gemfile
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ">=22.18.0"
+          cache: "npm"
+          cache-dependency-path: package-lock.json
+
+      - name: Install Node dependencies
+        run: npm install
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -27,18 +43,11 @@ jobs:
           ruby-version: 3.3
           bundler-cache: true
 
-      - name: Install Ruby gems (bundle install)
-        run: |
-          echo "Installing Ruby gems as documented in repository instructions..."
-          bundle install --jobs 4 && bundle clean --force
-        # Ensure the Bundler environment uses the repository Gemfile
-        env:
-          BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile
-          BUNDLE_PATH: ${{ github.workspace }}/vendor/bundle
-
       - name: Display environment info
         run: |
           echo "=== Environment Setup Complete ==="
+          echo "✅ Node Version: $(node --version)"
+          echo "✅ NPM Version: $(npm --version)"
           echo "✅ Ruby Version: $(ruby --version)"
           echo "✅ Jekyll Version: $(bundle exec jekyll --version || echo 'jekyll not available')"
           echo "✅ Bundler Version: $(bundle --version)"
