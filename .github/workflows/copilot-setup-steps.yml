@@ -27,20 +27,21 @@ jobs:
           ruby-version: 3.3
           bundler-cache: true
 
-      - name: Install dependencies
+      - name: Install Ruby gems (bundle install)
         run: |
-          bundle install
-
-      - name: Build Jekyll site
-        run: |
-          bundle exec jekyll build
+          echo "Installing Ruby gems as documented in repository instructions..."
+          bundle install --jobs 4 && bundle clean --force
+        # Ensure the Bundler environment uses the repository Gemfile
+        env:
+          BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile
+          BUNDLE_PATH: ${{ github.workspace }}/vendor/bundle
 
       - name: Display environment info
         run: |
           echo "=== Environment Setup Complete ==="
           echo "✅ Ruby Version: $(ruby --version)"
-          echo "✅ Jekyll Version: $(bundle exec jekyll --version)"
+          echo "✅ Jekyll Version: $(bundle exec jekyll --version || echo 'jekyll not available')"
           echo "✅ Bundler Version: $(bundle --version)"
-          echo "✅ Installed Gems:"
-          bundle list
+          echo "✅ Installed Gems (top-level):"
+          bundle list --paths | sed -n '1,200p' || true
           echo "=== Ready for Copilot Coding Agent Session ==="
