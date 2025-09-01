@@ -3,9 +3,10 @@
   "globs": [
     "!**/*",
     "pages/**/*.md",
-    "_includes/**/*.md",
-    "_layouts/**/*.md",
-    "README.md"
+    "_includes/**/*..md",
+    "_layouts/**/*..md",
+    "README.md",
+    ".github/copilot-instructions.md"
   ],
   "config": {
     "MD003": {
