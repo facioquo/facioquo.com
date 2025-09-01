@@ -110,7 +110,7 @@
         "env": {
           "BUNDLE_GEMFILE": "${workspaceFolder}/Gemfile",
           "BUNDLE_PATH": "${workspaceFolder}/vendor/bundle"
-        },
+        }
       },
       "problemMatcher": []
     }
