@@ -47,6 +47,34 @@
       "dependsOrder": "sequence",
       "group": "none",
       "problemMatcher": []
+    },
+    {
+      "label": "Lint: Markdown",
+      "type": "shell",
+      "command": "npm run lint:md",
+      "group": "none",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Fix: Markdown",
+      "type": "shell",
+      "command": "npm run fix:md",
+      "group": "none",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
     }
   ]
 }

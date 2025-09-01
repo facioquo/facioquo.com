@@ -5,6 +5,9 @@ on: workflow_dispatch
 concurrency:
   group: ${{ github.ref }}
 
+permissions:
+  contents: read
+
 jobs:
   deploy:
     name: Cloudflare Pages
@@ -14,15 +17,15 @@ jobs:
       BUNDLE_PATH: "vendor/bundle"
       BUNDLE_JOBS: 4
       BUNDLE_RETRY: 3
+      BUNDLE_GEMFILE: Gemfile
 
     environment:
       name: facioquo.com
       url: ${{ steps.deploy.outputs.deployment-alias-url }}
 
     steps:
-
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
