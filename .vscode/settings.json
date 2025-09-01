@@ -13,5 +13,5 @@
   "editor.guides.bracketPairs": "active",
   "editor.formatOnPaste": true,
   "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "scss.validate": false, // false-positives on Jekyll front matter
+  "scss.validate": false // false-positives on Jekyll front matter
 }
