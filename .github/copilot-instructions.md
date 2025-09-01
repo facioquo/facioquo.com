@@ -1,27 +1,27 @@
-# Copilot Coding Agent Instructions for facioquo.com
+# Copilot coding agent instructions for facioquo.com
 
-## Repository Overview
+## Repository overview
 
 **FacioQuo.com** is the top-level website for the FacioQuo organization, a Jekyll-based static website hosted on Cloudflare Pages. This is a small, focused codebase (~1,200 lines total) that builds and deploys reliably.
 
-### High-Level Details
+### High-level details
 
 - **Purpose**: Organizational website with landing page, privacy policy, and terms of service
 - **Size**: Small repository (~20 files, ~1,200 lines total)
 - **Type**: Static website
 - **Languages**: Jekyll (Ruby), HTML, SCSS, JavaScript
-- **Framework**: Jekyll 4.4.1 with Ruby 3.3
+- **Framework**: Jekyll 4.4 with Ruby 3.3
 - **Runtime**: Static files served via Cloudflare Pages
 - **Build Time**: Very fast (local builds typically complete in << 1s on CI)
 
-## Build Instructions
+## Build instructions
 
 ### Prerequisites
 
 - Ruby 3.3 (recommended)
-- Bundler 2.5.18 (project is locked with Bundler 2.5.18 in Gemfile.lock)
+- Node.js 22+
 
-### Environment Setup
+### Environment setup
 
 **ALWAYS run these commands in order for any development work:**
 
@@ -33,9 +33,9 @@ bundle install --jobs 4 && bundle clean --force
 bundle list
 ```
 
-### Core Development Commands
+### Core development commands
 
-#### Build the Site
+#### Build the site
 
 ```bash
 # Production build (most common)
@@ -46,7 +46,7 @@ rm -rf _site .jekyll-cache
 bundle exec jekyll build
 ```
 
-#### Local Development Server
+#### Local development server
 
 ```bash
 # Start development server (port 4000)
@@ -56,7 +56,7 @@ bundle exec jekyll serve
 bundle exec jekyll serve --livereload --open-url
 ```
 
-#### Verify Versions
+#### Verify versions
 
 ```bash
 # Check tool versions
@@ -65,22 +65,22 @@ bundle --version        # Should be 2.5+
 bundle exec jekyll --version  # Should be 4.4.x
 ```
 
-### Build Validation
+### Build validation
 
 - **Build Output**: Generated files appear in `_site/` directory
 - **Expected Files**: index.html, privacy.html, terms.html, 404.html, assets/, sitemap.xml
 - **Build Time**: Local builds are fast; CI runs on `ubuntu-latest` with Ruby 3.3
 - **No Errors**: Jekyll build should complete without warnings
 
-### Common Issues and Solutions
+### Common issues and solutions
 
 - **Bundle install fails**: Ensure Ruby 3.3 is installed
 - **Jekyll serve port conflict**: Use `bundle exec jekyll serve -P 4001` for alternate port
 - **Stale cache issues**: Delete `.jekyll-cache` and `_site` directories
 
-## Project Layout and Architecture
+## Project layout and architecture
 
-### Core Directory Structure
+### Core directory structure
 
 ```text
 /
@@ -111,7 +111,7 @@ bundle exec jekyll --version  # Should be 4.4.x
 └── .github/workflows/   # CI/CD pipelines
 ```
 
-### Key Configuration Files
+### Key configuration files
 
 - **\_config.yml**: Jekyll settings, plugins, SEO configuration
 - **Gemfile**: Ruby dependencies (Jekyll 4.4, plugins)
@@ -119,7 +119,7 @@ bundle exec jekyll --version  # Should be 4.4.x
 - **.markdownlint.json**: Markdown linting rules
 - **\_headers**: Cloudflare Pages headers configuration
 
-### Content Architecture
+### Content architecture
 
 - **Homepage**: `/pages/home.html` → `/` (splash page with JavaScript navigation)
 - **Static Pages**: Markdown files in `/pages/` with front matter
@@ -127,9 +127,9 @@ bundle exec jekyll --version  # Should be 4.4.x
 - **Styling**: SCSS files in `_sass/` compiled via `assets/css/style.scss`
 - **Scripts**: Inline JavaScript in `_includes/head-home-script.html`
 
-### Continuous Integration and Validation
+### Continuous integration and validation
 
-### GitHub Actions Workflows
+### GitHub Actions workflows
 
 1. **deploy-website.yml** (Manual trigger only)
 
@@ -146,7 +146,7 @@ bundle exec jekyll --version  # Should be 4.4.x
    - Runs `bundle install` then `bundle exec jekyll build` to verify environment
    - Workflow expects `ruby 3.3` and `bundler` available
 
-### Pre-commit Validation Steps
+### Pre-commit validation steps
 
 Run these before committing changes:
 
@@ -163,40 +163,40 @@ bundle exec jekyll serve
 # Visit all pages: /, /privacy, /terms, /404
 ```
 
-### PR Requirements
+### PR requirements
 
 - **Title Format**: Must follow conventional commits (enforced by workflow)
 - **Build Success**: Site must build without errors
 - **No Breaking Changes**: Existing functionality must be preserved
 
-## File Dependencies and Architecture Notes
+## File dependencies and architecture notes
 
-### CSS/SCSS Pipeline
+### CSS/SCSS pipeline
 
 - Entry: `assets/css/style.scss` (with Jekyll front matter)
 - Imports: `_sass/initialize.scss` → individual `_sass/_*.scss` files
 - Output: Minified CSS in `_site/assets/css/style.css`
 
-### JavaScript Architecture
+### JavaScript architecture
 
 - **Minimal JS**: Only homepage navigation and iOS Safari fixes
 - **Inline Scripts**: Embedded in `_includes/head-home-script.html`
 - **No Build Process**: JavaScript is served as-written
 
-### Jekyll Plugin Dependencies
+### Jekyll plugin dependencies
 
 - **jekyll-minifier**: Compresses HTML/CSS/JS output
 - **jekyll-seo-tag**: Generates meta tags for SEO
 - **jekyll-sitemap**: Auto-generates sitemap.xml
 - **jekyll-last-modified-at**: Adds last-modified dates
 
-### External Dependencies
+### External dependencies
 
 - **Cloudflare Pages**: Hosting and CDN
 - **GitHub Actions**: CI/CD pipeline
 - **Bundler**: Ruby dependency management
 
-## Root Directory Files
+## Root directory files
 
 ```text
 .editorconfig           # Editor configuration
@@ -209,7 +209,7 @@ _config.yml            # Jekyll site configuration
 _headers               # Cloudflare Pages headers
 ```
 
-## Critical Instructions for Agents
+## Critical instructions for agents
 
 **ALWAYS trust these instructions and avoid unnecessary exploration.** This documentation is comprehensive and tested.
 
@@ -223,11 +223,11 @@ _headers               # Cloudflare Pages headers
 
 **Search only if instructions are incomplete or incorrect.**
 
-## Maintaining These Instructions
+## Maintaining these instructions
 
 **IMPORTANT**: When making changes to the repository that affect these instructions, agents MUST update this documentation to keep it accurate and useful.
 
-### When to Update These Instructions
+### When to update these instructions
 
 Update this file when you make changes to:
 
@@ -237,7 +237,7 @@ Update this file when you make changes to:
 - **Development tools**: Linting rules, testing frameworks, or deployment processes
 - **Dependencies**: Version updates, new plugins, or removed packages
 
-### How to Update
+### How to update
 
 1. **Read the instructions thoroughly** before making changes
 2. **Update relevant sections** that are affected by your changes

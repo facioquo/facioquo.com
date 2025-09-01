@@ -30,7 +30,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ">=22.18.0"
+          node-version: "22"
           cache: "npm"
           cache-dependency-path: package-lock.json
 
@@ -42,6 +42,10 @@ jobs:
         with:
           ruby-version: 3.3
           bundler-cache: true
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+        continue-on-error: true
 
       - name: Display environment info
         run: |
