@@ -2,7 +2,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Install: Ruby Gem packages",
+      "label": "Install: Ruby Gems",
       "type": "shell",
       "command": "bundle install --jobs 4 && bundle clean --force",
       "options": {
@@ -16,35 +16,12 @@
       "problemMatcher": []
     },
     {
-      "label": "Update: Ruby Gem packages",
+      "label": "Install: NPM packages",
       "type": "shell",
-      "command": "bundle update --conservative && bundle clean --force",
+      "command": "npm install",
       "options": {
-        "cwd": "${workspaceFolder}",
-        "env": {
-          "BUNDLE_GEMFILE": "${workspaceFolder}/Gemfile",
-          "BUNDLE_PATH": "${workspaceFolder}/vendor/bundle"
-        }
+        "cwd": "${workspaceFolder}"
       },
-      "dependsOn": "Install: Ruby Gem packages",
-      "dependsOrder": "sequence",
-      "group": "none",
-      "problemMatcher": []
-    },
-    {
-      "label": "Run: Website with LiveReload",
-      "type": "shell",
-      "command": "bundle exec jekyll serve --livereload --open-url",
-      "isBackground": true,
-      "options": {
-        "cwd": "${workspaceFolder}",
-        "env": {
-          "BUNDLE_GEMFILE": "${workspaceFolder}/Gemfile",
-          "BUNDLE_PATH": "${workspaceFolder}/vendor/bundle"
-        }
-      },
-      "dependsOn": "Install: Ruby Gem packages",
-      "dependsOrder": "sequence",
       "group": "none",
       "problemMatcher": []
     },
@@ -52,7 +29,8 @@
       "label": "Lint: Markdown",
       "type": "shell",
       "command": "npm run lint:md",
-      "group": "none",
+      "dependsOn": "Install: NPM packages",
+      "dependsOrder": "sequence",
       "presentation": {
         "reveal": "always",
         "panel": "shared"
@@ -66,13 +44,73 @@
       "label": "Fix: Markdown",
       "type": "shell",
       "command": "npm run fix:md",
-      "group": "none",
+      "dependsOn": "Install: NPM packages",
+      "dependsOrder": "sequence",
       "presentation": {
         "reveal": "always",
         "panel": "shared"
       },
       "options": {
         "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Update: Ruby Gems",
+      "type": "shell",
+      "command": "bundle lock --add-platform x86_64-linux x64-mingw-ucrt && bundle update --conservative && bundle clean --force",
+      "dependsOn": "Install: Ruby Gems",
+      "dependsOrder": "sequence",
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "BUNDLE_GEMFILE": "${workspaceFolder}/Gemfile",
+          "BUNDLE_PATH": "${workspaceFolder}/vendor/bundle"
+        }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Update: NPM packages",
+      "type": "shell",
+      "command": "npm update",
+      "dependsOn": "Install: NPM packages",
+      "dependsOrder": "sequence",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Update: All packages",
+      "type": "shell",
+      "dependsOn": [
+        "Update: NPM packages",
+        "Update: Ruby Gems"
+      ],
+      "dependsOrder": "sequence",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run: Website (LiveReload)",
+      "type": "shell",
+      "command": "bundle exec jekyll serve --livereload --open-url",
+      "isBackground": true,
+      "dependsOn": "Install: Ruby Gems",
+      "dependsOrder": "sequence",
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "BUNDLE_GEMFILE": "${workspaceFolder}/Gemfile",
+          "BUNDLE_PATH": "${workspaceFolder}/vendor/bundle"
+        },
       },
       "problemMatcher": []
     }
