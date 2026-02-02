@@ -2,7 +2,7 @@
 
 ## Repository overview
 
-**FacioQuo.com** is the top-level website for the FacioQuo organization, a Jekyll-based static website hosted on Cloudflare Pages. This is a small, focused codebase (~1,200 lines total) that builds and deploys reliably.
+**FaciōQuō.com** is the top-level website for the FaciōQuō organization, a Jekyll-based static website hosted on Cloudflare Pages. This is a small, focused codebase (~1,200 lines total) that builds and deploys reliably.
 
 ### High-level details
 

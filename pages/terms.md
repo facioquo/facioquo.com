@@ -12,11 +12,11 @@ footer: true
 
 ## Agreement to terms
 
-By accessing or using the FacioQuo website and services ("Services"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our Services.
+By accessing or using the FaciōQuō website and services ("Services"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our Services.
 
 ## Description of services
 
-FacioQuo provides online tools, microsites, and utility applications. We are affiliated with [Skender Co.](https://skenderco.com), a U.S.-based company that owns and operates this organization.
+FaciōQuō provides online tools, microsites, and utility applications. We are affiliated with [Skender Co.](https://skenderco.com), a U.S.-based company that owns and operates this organization.
 
 ## Acceptable use
 
@@ -46,7 +46,7 @@ We reserve the right to remove any User Content that violates these Terms or is 
 
 ## Intellectual property rights
 
-The Services and their content, features, and functionality are owned by FacioQuo, Skender Co., or our licensors and are protected by intellectual property laws. You may not:
+The Services and their content, features, and functionality are owned by FaciōQuō, Skender Co., or our licensors and are protected by intellectual property laws. You may not:
 
 - Copy, modify, or distribute our content without permission
 - Use our trademarks or service marks without authorization
@@ -69,7 +69,7 @@ The Services are provided "as is" and "as available" without any warranties of a
 
 ### Limitation of liability
 
-To the maximum extent permitted by law, FacioQuo and Skender Co. shall not be liable for:
+To the maximum extent permitted by law, FaciōQuō and Skender Co. shall not be liable for:
 
 - Any indirect, incidental, special, or consequential damages
 - Loss of profits, data, or business opportunities
@@ -79,7 +79,7 @@ This limitation applies even if we have been advised of the possibility of such 
 
 ## Indemnification
 
-You agree to indemnify and hold harmless FacioQuo, Skender Co., and our affiliates from any claims, damages, or expenses arising from:
+You agree to indemnify and hold harmless FaciōQuō, Skender Co., and our affiliates from any claims, damages, or expenses arising from:
 
 - Your use of the Services
 - Your violation of these Terms
@@ -134,13 +134,13 @@ If any provision of these Terms is found to be invalid or unenforceable, the rem
 
 ## Entire agreement
 
-These Terms, together with our Privacy Policy, constitute the entire agreement between you and FacioQuo regarding the Services.
+These Terms, together with our Privacy Policy, constitute the entire agreement between you and FaciōQuō regarding the Services.
 
 ## Contact information
 
 If you have questions about these Terms, please contact us:
 
-**FacioQuo**  
+**FaciōQuō**  
 Contact: [submit inquiry](https://bit.ly/3ZT6AMJ)  
 Website: [facioquo.com](https://facioquo.com)
 

@@ -12,7 +12,7 @@ footer: true
 
 ## Introduction
 
-FacioQuo ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services. We are affiliated with [Skender Co.](https://skenderco.com), a U.S.-based company.
+FaciōQuō ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services. We are affiliated with [Skender Co.](https://skenderco.com), a U.S.-based company.
 
 ## Information we collect
 
@@ -100,7 +100,7 @@ We may update this Privacy Policy from time to time. We will notify you of any m
 
 If you have questions about this Privacy Policy or our privacy practices, please contact us:
 
-**FacioQuo**  
+**FaciōQuō**  
 Contact: [submit inquiry](https://bit.ly/3ZT6AMJ)  
 Website: [facioquo.com](https://facioquo.com)
 
