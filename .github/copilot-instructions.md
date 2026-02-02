@@ -2,7 +2,7 @@
 
 ## Repository overview
 
-**FacioQuo.com** is the top-level website for the FacioQuo organization, a Jekyll-based static website hosted on Cloudflare Pages. This is a small, focused codebase (~1,200 lines total) that builds and deploys reliably.
+**FacioQuo.com** is the top-level website for the FaciōQuō organization, a Jekyll-based static website hosted on Cloudflare Pages. This is a small, focused codebase (~1,200 lines total) that builds and deploys reliably.
 
 ### High-level details
 
@@ -19,7 +19,7 @@
 ### Prerequisites
 
 - Ruby 3.3 (recommended)
-- Node.js 22+
+- Node.js 24+
 
 ### Environment setup
 

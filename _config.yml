@@ -1,5 +1,5 @@
 # Site settings
-title: FacioQuo
+title: FaciōQuō
 tagline: Tool and microsite builders
 lang: en-US
 
@@ -12,10 +12,10 @@ image:
   path: /assets/social-banner.png
   height: 640
   width: 1280
-  alt: FacioQuo
+  alt: FaciōQuō
 
 organization:
-  name: FacioQuo
+  name: FaciōQuō
   contact_url: https://bit.ly/3ZT6AMJ
   state: Maryland
 
