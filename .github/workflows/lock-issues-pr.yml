@@ -3,7 +3,7 @@ name: Lock closed threads
 
 on:
   schedule:
-    - cron: "0 6 * * 2"
+    - cron: 0 6 * * 2
   workflow_dispatch:
 
 permissions:
@@ -15,9 +15,11 @@ concurrency:
 
 jobs:
   lock:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
+    timeout-minutes: 10
+
     steps:
-      - uses: dessant/lock-threads@v5
+      - uses: dessant/lock-threads@v6
         with:
           process-only: issues, prs
           issue-inactive-days: "90"

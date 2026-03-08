@@ -6,12 +6,12 @@
   "search.exclude": {
     "**/_site/**": true,
     "**/.jekyll-cache/**": true,
-    "**/vendor/**": true
+    "**/vendor/**": true,
+    "**/*.svg": true
   },
   "editor.codeLens": false,
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
   "editor.formatOnPaste": true,
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
   "scss.validate": false // false-positives on Jekyll front matter
 }

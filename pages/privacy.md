@@ -101,7 +101,7 @@ We may update this Privacy Policy from time to time. We will notify you of any m
 If you have questions about this Privacy Policy or our privacy practices, please contact us:
 
 **FaciōQuō**  
-Contact: [submit inquiry](https://bit.ly/3ZT6AMJ)  
+Contact: [submit inquiry](https://forms.gle/cEtaHdF2tK3zSVLy8)  
 Website: [facioquo.com](https://facioquo.com)
 
 For legal entity inquiries:  
