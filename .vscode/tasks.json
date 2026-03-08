@@ -1,8 +1,18 @@
 {
   "version": "2.0.0",
+  "presentation": {
+    "clear": true,
+    "panel": "dedicated",
+    "showReuseMessage": false
+  },
+  "options": {
+    "cwd": "${workspaceFolder}"
+  },
+  "problemMatcher": [],
   "tasks": [
     {
-      "label": "Install: Ruby Gems",
+      "label": "Install: Ruby Gem packages",
+      "detail": "Install packages for website",
       "type": "shell",
       "command": "bundle install --jobs 4 && bundle clean --force",
       "options": {
@@ -11,99 +21,42 @@
           "BUNDLE_GEMFILE": "${workspaceFolder}/Gemfile",
           "BUNDLE_PATH": "${workspaceFolder}/vendor/bundle"
         }
-      },
-      "group": "none",
-      "problemMatcher": []
+      }
     },
     {
-      "label": "Install: NPM packages",
+      "label": "Update: Ruby Gem packages",
+      "detail": "Update Ruby gem packages (conservative update and cleanup)",
       "type": "shell",
-      "command": "npm install",
+      "command": "bundle lock --add-platform x86_64-linux x64-mingw-ucrt && bundle update --conservative && bundle clean --force",
+      "dependsOn": "Install: Ruby Gem packages",
+      "dependsOrder": "sequence",
       "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "group": "none",
-      "problemMatcher": []
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "BUNDLE_GEMFILE": "${workspaceFolder}/Gemfile",
+          "BUNDLE_PATH": "${workspaceFolder}/vendor/bundle"
+        }
+      }
     },
     {
       "label": "Lint: Markdown",
+      "detail": "Check for markdown file linting issues",
       "type": "shell",
-      "command": "npm run lint:md",
-      "dependsOn": "Install: NPM packages",
-      "dependsOrder": "sequence",
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared"
-      },
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "problemMatcher": []
+      "command": "npx markdownlint-cli2"
     },
     {
-      "label": "Fix: Markdown",
+      "label": "Lint: Markdown (fix)",
+      "detail": "Auto-fix markdown file linting issues (where possible).",
       "type": "shell",
-      "command": "npm run fix:md",
-      "dependsOn": "Install: NPM packages",
-      "dependsOrder": "sequence",
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared"
-      },
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "problemMatcher": []
-    },
-    {
-      "label": "Update: Ruby Gems",
-      "type": "shell",
-      "command": "bundle lock --add-platform x86_64-linux x64-mingw-ucrt && bundle update --conservative && bundle clean --force",
-      "dependsOn": "Install: Ruby Gems",
-      "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${workspaceFolder}",
-        "env": {
-          "BUNDLE_GEMFILE": "${workspaceFolder}/Gemfile",
-          "BUNDLE_PATH": "${workspaceFolder}/vendor/bundle"
-        }
-      },
-      "problemMatcher": []
-    },
-    {
-      "label": "Update: NPM packages",
-      "type": "shell",
-      "command": "npm update",
-      "dependsOn": "Install: NPM packages",
-      "dependsOrder": "sequence",
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "problemMatcher": []
-    },
-    {
-      "label": "Update: All packages",
-      "type": "shell",
-      "dependsOn": [
-        "Update: NPM packages",
-        "Update: Ruby Gems"
-      ],
-      "dependsOrder": "sequence",
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared"
-      },
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "problemMatcher": []
+      "command": "npx markdownlint-cli2 --fix"
     },
     {
       "label": "Run: Website (LiveReload)",
+      "detail": "Start local Jekyll dev server with LiveReload (background)",
       "type": "shell",
       "command": "bundle exec jekyll serve --livereload --open-url",
       "isBackground": true,
-      "dependsOn": "Install: Ruby Gems",
+      "dependsOn": "Install: Ruby Gem packages",
       "dependsOrder": "sequence",
       "options": {
         "cwd": "${workspaceFolder}",
@@ -111,8 +64,7 @@
           "BUNDLE_GEMFILE": "${workspaceFolder}/Gemfile",
           "BUNDLE_PATH": "${workspaceFolder}/vendor/bundle"
         }
-      },
-      "problemMatcher": []
+      }
     }
   ]
 }
